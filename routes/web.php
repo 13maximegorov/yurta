@@ -23,8 +23,9 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/card-add', 'AdminController@card_add');
 });
 
-// Авторизация 1
+// Авторизация 12
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
 });
+// Авторизация 12
