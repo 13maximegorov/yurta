@@ -20,7 +20,7 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/logout', 'JoinController@logout');
 });
 
-// Авторизация
+// Авторизация 1
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
