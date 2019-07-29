@@ -30,12 +30,4 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
 });
-<<<<<<< HEAD
-
-//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
-//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
-//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
-||||||| merged common ancestors
-=======
 // Авторизация 12  
->>>>>>> refs/remotes/origin/master
