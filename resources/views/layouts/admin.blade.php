@@ -17,6 +17,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/admin1/css/style.css">
+    <link rel="stylesheet" href="/admin1/css/style1.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="/admin1/images/favicon.png" />
 </head>
@@ -170,10 +171,17 @@
             <div class="container">
                 <ul class="nav page-navigation">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
+                        <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="clients.html" class="nav-link"><i class="link-icon icon-docs"></i><span class="menu-title">Карточки</span></a>
+                        <a href="/yurtaboard/card" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-arrow"></i></a>
+                        <div class="submenu">
+                            <ul class="submenu-item">
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/card">Просмотр</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/card-add">Добавление</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/news_removal.html">Удаление</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
