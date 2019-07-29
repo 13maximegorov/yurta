@@ -12,15 +12,16 @@
                 <p>У Вас нет аккаунта?</p>
                 <a class="btn get-started-btn" href="register-2.html">Начать</a>
             </div>
-            <form action="#" method="post">
+            <form action="/yurtaboard/login" method="post">
                 <h3 class="mr-auto">Добро пожаловать! Давайте начнем</h3>
                 <p class="mb-5 mr-auto">Введите свои данные ниже</p>
+                {{ csrf_field() }}
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Логин">
+                        <input type="text" class="form-control" name="login" placeholder="Логин">
                     </div>
                 </div>
                 <div class="form-group">
@@ -28,11 +29,11 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Пароль">
+                        <input type="password" class="form-control" name="password" placeholder="Пароль">
                     </div>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary submit-btn">ВОЙТИ</button>
+                    <button class="btn btn-primary submit-btn" type="submit">ВОЙТИ</button>
                 </div>
                 <div class="wrapper mt-5 text-gray">
                     <p class="footer-text">Copyright © 2019</p>
