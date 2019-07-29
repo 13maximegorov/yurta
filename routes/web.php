@@ -30,3 +30,7 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
 });
+
+//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
+//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
+//jsghdvdjhvgjhdsgvbdsgvdfsg giiiititttt hhddddssssddkjjbhbvfokhhvhcfgudijfklfuyf
