@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Панель управления Yurtaboard
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'notAdmin'], function () {
     Route::get('/', 'AdminController@index');
     Route::get('/logout', 'JoinController@logout');
+    Route::get('/card', 'AdminController@card');
+    Route::get('/card-add', 'AdminController@card_add');
 });
 
 // Авторизация 1
