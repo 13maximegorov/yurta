@@ -9,6 +9,14 @@ class AdminController extends Controller
 {
     // index
     public function index() {
-        return response()->json('Hello', 200);
+        return view('admin.index');
+    }
+
+    public function login() {
+        return view('admin.signin');
+    }
+
+    public function reg() {
+        return view('admin.reg');
     }
 }

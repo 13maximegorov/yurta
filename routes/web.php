@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin'], function () {
     Route::get('/login', 'AdminController@login');
     Route::get('/', 'AdminController@index');
+    Route::get('/reg', 'AdminController@reg');
 });
