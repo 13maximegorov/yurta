@@ -24,6 +24,8 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
 });
 
 // Авторизация 12
+// Авторизация 12
+// Авторизация 12
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
