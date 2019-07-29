@@ -30,4 +30,6 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
 });
-// Авторизация 12  
+// Авторизация 12
+// Авторизация 12
+// Авторизация 12
