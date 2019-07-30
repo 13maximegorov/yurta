@@ -17,6 +17,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/admin1/css/style.css">
+    <link rel="stylesheet" href="/admin1/css/style1.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="/admin1/images/favicon.png" />
 </head>
@@ -170,10 +171,17 @@
             <div class="container">
                 <ul class="nav page-navigation">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
+                        <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="clients.html" class="nav-link"><i class="link-icon icon-docs"></i><span class="menu-title">Карточки</span></a>
+                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-arrow"></i></a>
+                        <div class="submenu">
+                            <ul class="submenu-item">
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards">Просмотр</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards-add">Добавление</a></li>
+                                <li class="nav-item"><a class="nav-link" href="pages/news_removal.html">Удаление</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -201,6 +209,7 @@
 <script src="/admin1/js/dashboard.js"></script>
 <script src="/admin1/js/template.js"></script>
 <script src="/admin1/js/todolist.js"></script>
+<script src="/admin1/js/dropify.js"></script>
 {{--<script src="/admin1/js/data-table.js"></script>--}}
 {{--<script src="/admin1/js/db.js"></script>--}}
 {{--<script src="/admin1/js/db2.js"></script>--}}
