@@ -12,12 +12,33 @@ class SettingsTableSeeder extends Seeder
     public function run()
     {
         DB::table('settings')->insert([
-            'site.title' => 'Medical group Yurta',
-            'side.name' => 'Yurta',
-            'site.footer' => 'Copyright',
-            'site.meta.desc' => 'Описание',
-            'site.meta.key' => 'Ключевые слова',
-            'site.meta.author' => 'Автор'
+            'key' => 'site.title',
+            'value' => 'Medical group Yurta'
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'side.name',
+            'value' => 'Yurta'
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'site.footer',
+            'value' => 'Copyright'
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'site.meta.desc',
+            'value' => 'Описание'
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'site.meta.key',
+            'value' => 'Ключевые слова'
+        ]);
+
+        DB::table('settings')->insert([
+            'key' => 'site.meta.author',
+            'value' => 'Автор'
         ]);
     }
 }

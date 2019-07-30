@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Settings;
+use App\{Settings, Cards};
 
 class AdminController extends Controller
 {
@@ -19,7 +19,8 @@ class AdminController extends Controller
     }
 
     public function cards() {
-        return view('admin.cards');
+        $cards = Cards::orderBy('id', 'desc')->get();
+        return view('admin.cards', ['cards' => $cards]);
     }
 
     public function cards_add() {

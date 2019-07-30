@@ -11,8 +11,9 @@
                                 <h4 class="card-title">Карточки</h4>
                                 <p class="card-description">Просмотр и редактирование</p>
                                 <div class="row pricing-table">
+                                    @foreach($cards as $card)
                                     <div class="card_view col-md-6 col-lg-4 col-12 grid-margin stretch-card pricing-card">
-                                        <img class="w-100 d-block" src="/img/card.jpg" alt="">
+                                        <img class="w-100 d-block" src="{{$card->img}}" alt="">
                                         <div class="controls_card">
                                             <div class="dropdown dropup">
                                                 <button class="btn btn-primary icon-btn dropdown-toggle" type="button" id="dropdownMenuIconButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,7 +30,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

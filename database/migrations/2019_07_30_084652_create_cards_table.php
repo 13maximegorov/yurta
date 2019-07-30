@@ -19,7 +19,7 @@ class CreateCardsTable extends Migration
             $table->string('url', 255);
             $table->text('text');
             $table->string('img', 255);
-            $table->date('date');
+            $table->timestamps();
         });
     }
 
