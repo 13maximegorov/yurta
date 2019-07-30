@@ -174,11 +174,11 @@
                         <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="/yurtaboard/card" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-arrow"></i></a>
+                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-arrow"></i></a>
                         <div class="submenu">
                             <ul class="submenu-item">
-                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/card">Просмотр</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/card-add">Добавление</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards">Просмотр</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards-add">Добавление</a></li>
                                 <li class="nav-item"><a class="nav-link" href="pages/news_removal.html">Удаление</a></li>
                             </ul>
                         </div>
@@ -209,6 +209,7 @@
 <script src="/admin1/js/dashboard.js"></script>
 <script src="/admin1/js/template.js"></script>
 <script src="/admin1/js/todolist.js"></script>
+<script src="/admin1/js/dropify.js"></script>
 {{--<script src="/admin1/js/data-table.js"></script>--}}
 {{--<script src="/admin1/js/db.js"></script>--}}
 {{--<script src="/admin1/js/db2.js"></script>--}}

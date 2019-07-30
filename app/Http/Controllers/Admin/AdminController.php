@@ -20,11 +20,11 @@ class AdminController extends Controller
         return view('admin.reg');
     }
 
-    public function card() {
-        return view('admin.card');
+    public function cards() {
+        return view('admin.cards');
     }
 
-    public function card_add() {
-        return view('admin.card_add');
+    public function cards_add() {
+        return view('admin.cards_add');
     }
 }

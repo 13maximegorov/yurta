@@ -1,3 +1,14 @@
 .card_view img {
     object-fit: none;
 }
+
+.card_view {
+    position: relative;
+}
+
+.controls_card {
+    padding: 0 18px 10px;
+    position: absolute!important;
+    bottom: 0;
+    right: 0;
+}
