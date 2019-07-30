@@ -17,7 +17,7 @@ class JoinController extends Controller
         if (Auth::attempt(['login' => $request->login, 'password' => $request->password])) {
             return redirect('/yurtaboard');
         } else {
-            Session::put('error_admin', 'Неверные данные');
+            Session::flash('error_admin', 'Неверные данные');
             return redirect('/yurtaboard');
         }
     }

@@ -19,8 +19,9 @@ Route::get('/', function () {
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'notAdmin'], function () {
     Route::get('/', 'AdminController@index');
     Route::get('/logout', 'JoinController@logout');
-    Route::get('/cards', 'AdminController@cards');
-    Route::get('/cards-add', 'AdminController@cards_add');
+    Route::get('/cards', 'CardsController@cards');
+    Route::get('/cards/add', 'CardsController@cardsAdd');
+    Route::post('/cards/add', 'CardsController@addCard');
 });
 
 // Аутентификация

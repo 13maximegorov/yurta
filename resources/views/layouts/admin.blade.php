@@ -178,7 +178,7 @@
                         <div class="submenu">
                             <ul class="submenu-item">
                                 <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards">Просмотр</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards-add">Добавление</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards/add">Добавление</a></li>
                                 <li class="nav-item"><a class="nav-link" href="pages/news_removal.html">Удаление</a></li>
                             </ul>
                         </div>
