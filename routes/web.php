@@ -15,12 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Панель управления Yurtaboard
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'notAdmin'], function () {
     Route::get('/', 'AdminController@index');
     Route::get('/logout', 'JoinController@logout');
 });
 
-// Авторизация
+// Аутентификация
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'isAdmin'], function () {
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');

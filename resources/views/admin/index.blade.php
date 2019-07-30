@@ -243,4 +243,5 @@
         </div>
       </div>
     </div>
+  {{deb($settings)}}
 @endsection

@@ -16,6 +16,14 @@
                 <h3 class="mr-auto">Добро пожаловать! Давайте начнем</h3>
                 <p class="mb-5 mr-auto">Введите свои данные ниже</p>
                 {{ csrf_field() }}
+                @if(\Illuminate\Support\Facades\Session::has('error_admin'))
+                    <div class="alert alert-danger" role="alert">
+                        {{\Illuminate\Support\Facades\Session::get('error_admin')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -46,4 +54,10 @@
         </div>
     </div>
 </div>
-    @endsection
+@endsection
+
+<?php
+    if (\Illuminate\Support\Facades\Session::has('error_admin')) {
+        \Illuminate\Support\Facades\Session::forget('error_admin');
+    }
+    ?>
