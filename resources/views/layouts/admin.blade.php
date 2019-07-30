@@ -149,12 +149,12 @@
                                 <span class="nav-profile-name">Александр Александрович</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
+                                <a href="/yurtaboard/settings" class="dropdown-item">
                                     <i class="icon-settings text-primary mr-2"></i>
                                     Настройки
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item">
+                                <a href="#" class="dropdown-item">
                                     <i class="icon-logout text-primary mr-2"></i>
                                     Выход
                                 </a>

@@ -15,16 +15,17 @@
                                     <div class="card_view col-md-6 col-lg-4 col-12 grid-margin stretch-card pricing-card">
                                         <img class="w-100 d-block" src="/img/cards/{{$card->img}}" alt="">
                                         <div class="controls_card">
-                                            <div class="dropdown">
+                                            <div class="dropdown dropup">
                                                 <button class="btn btn-primary icon-btn dropdown-toggle" type="button" id="dropdownMenuIconButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="icon-pencil"></i>
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuIconButton6">
-                                                    <a class="dropdown-item" href="#">Просмтотреть</a>
-                                                    <a class="dropdown-item" href="#">Редактировать</a>
-                                                    <div class="dropdown-divider"></div>
-
                                                     <a class="dropdown-item" href="#">Удалить</a>
+
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Просмотреть</a>
+                                                    <a class="dropdown-item" href="#">Редактировать</a>
+
                                                 </div>
                                             </div>
                                         </div>
