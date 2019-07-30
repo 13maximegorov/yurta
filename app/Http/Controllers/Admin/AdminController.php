@@ -18,19 +18,15 @@ class AdminController extends Controller
         return view('admin.index', ['settings' => $data]);
     }
 
-    public function login() {
-        return view('admin.signin');
-    }
-
-    public function reg() {
-        return view('admin.reg');
-    }
-
     public function cards() {
         return view('admin.cards');
     }
 
     public function cards_add() {
         return view('admin.cards_add');
+    }
+
+    public function settings() {
+        return view('admin.settings');
     }
 }

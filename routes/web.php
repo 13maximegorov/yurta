@@ -21,6 +21,7 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/logout', 'JoinController@logout');
     Route::get('/cards', 'AdminController@cards');
     Route::get('/cards-add', 'AdminController@cards_add');
+    Route::get('/settings', 'AdminController@settings');
 });
 
 // Аутентификация
