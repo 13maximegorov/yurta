@@ -19,6 +19,7 @@ class CreateCardsTable extends Migration
             $table->string('url', 255);
             $table->text('text');
             $table->string('img', 255);
+            $table->enum('is_active', [0, 1]);
             $table->timestamps();
         });
     }

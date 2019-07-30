@@ -17,17 +17,4 @@ class AdminController extends Controller
         }
         return view('admin.index', ['settings' => $data]);
     }
-
-    public function cards() {
-        $cards = Cards::orderBy('id', 'desc')->get();
-        return view('admin.cards', ['cards' => $cards]);
-    }
-
-    public function cards_add() {
-        return view('admin.cards_add');
-    }
-
-    public function settings() {
-        return view('admin.settings');
-    }
 }
