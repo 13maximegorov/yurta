@@ -174,14 +174,7 @@
                         <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-arrow"></i></a>
-                        <div class="submenu">
-                            <ul class="submenu-item">
-                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards">Просмотр</a></li>
-                                <li class="nav-item"><a class="nav-link" href="/yurtaboard/cards/add">Добавление</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pages/news_removal.html">Удаление</a></li>
-                            </ul>
-                        </div>
+                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-title"></i></a>
                     </li>
                 </ul>
             </div>

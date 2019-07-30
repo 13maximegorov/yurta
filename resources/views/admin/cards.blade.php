@@ -10,6 +10,7 @@
                             <div class="container">
                                 <h4 class="card-title">Карточки</h4>
                                 <p class="card-description">Просмотр и редактирование</p>
+                                <a href="/yurtaboard/cards/add" class="btn btn-primary mb-3">Добавление</a>
                                 <div class="row pricing-table">
                                     @foreach($cards as $card)
                                     <div class="card_view col-md-6 col-lg-4 col-12 grid-margin stretch-card pricing-card">

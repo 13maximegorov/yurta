@@ -1,5 +1,5 @@
 .card_view img {
-    object-fit: none;
+    object-fit: cover;
 }
 
 .card_view {
