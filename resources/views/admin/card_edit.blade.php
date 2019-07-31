@@ -32,11 +32,11 @@
                                 @endif
                                 <div class="form-group">
                                     <label for="title">Название</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Название" value="">
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Название" value="{{$card->title}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="descr">Описание</label>
-                                    <textarea type="text" class="form-control" id="descr"  name="text" placeholder="Описание"></textarea>
+                                    <textarea type="text" class="form-control" id="descr"  name="text" placeholder="Описание">{{$card->text}}</textarea>
                                 </div>
                                 <div class="form-group">
                                         <div class="card">
