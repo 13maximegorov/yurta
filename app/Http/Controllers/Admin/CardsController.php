@@ -39,6 +39,9 @@ class CardsController extends Controller
         $cards->text = strip_tags($request->text);
         $cards->url = '';
         $cards->img = $image->getClientOriginalName();
+        if ($request->is_active == "on") {
+            $cards->is_active = '1';
+        }
         $cards->save();
 
         Session::flash('success', 'Успешно добавлено');
@@ -46,4 +49,8 @@ class CardsController extends Controller
         return redirect('/yurtaboard/cards/add');
     }
 
+    public function deleteCard($id) {
+        Cards::find($id)->delete();
+        return redirect('/yurtaboard/cards');
+    }
 }
