@@ -22,6 +22,7 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/cards', 'CardsController@cards');
     Route::get('/cards/add', 'CardsController@cardsAdd');
     Route::post('/cards/add', 'CardsController@addCard');
+    Route::get('/cards/edit', 'CardsController@cardEdit');
     Route::get('/settings', 'SettingsController@settings');
 });
 

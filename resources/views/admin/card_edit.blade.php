@@ -7,10 +7,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Добавление карточки</h4>
-{{--                            <p class="card-description">--}}
-{{--                                Basic form layout--}}
-{{--                            </p>--}}
+                            <h4 class="card-title">Редактирование карточки</h4>
                             <form class="forms-sample" method="post" action="/yurtaboard/cards/add" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @if (count($errors) > 0)
@@ -35,11 +32,11 @@
                                 @endif
                                 <div class="form-group">
                                     <label for="title">Название</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Название">
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Название" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="descr">Описание</label>
-                                    <textarea type="text" class="form-control" id="descr"  name="text" maxlength="300" placeholder="Описание"></textarea>
+                                    <textarea type="text" class="form-control" id="descr"  name="text" placeholder="Описание"></textarea>
                                 </div>
                                 <div class="form-group">
                                         <div class="card">
@@ -55,7 +52,7 @@
                                         Не показывать
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary mr-2">Добавить</button>
+                                <button type="submit" class="btn btn-primary mr-2">Редактировать</button>
                                 <a href="/yurtaboard/cards/" class="btn btn-light">Отменить</a>
                             </form>
                         </div>

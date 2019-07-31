@@ -14,6 +14,10 @@ class CardsController extends Controller
         return view('admin.cards', ['cards' => $cards]);
     }
 
+    public function cardEdit() {
+        return view('admin.card_edit');
+    }
+
     public function cardsAdd() {
         return view('admin.cards_add');
     }
@@ -41,4 +45,5 @@ class CardsController extends Controller
 
         return redirect('/yurtaboard/cards/add');
     }
+
 }

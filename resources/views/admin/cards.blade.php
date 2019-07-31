@@ -25,7 +25,7 @@
 
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#">Просмотреть</a>
-                                                    <a class="dropdown-item" href="#">Редактировать</a>
+                                                    <a class="dropdown-item" href="/yurtaboard/cards/edit/">Редактировать</a>
 
                                                 </div>
                                             </div>
