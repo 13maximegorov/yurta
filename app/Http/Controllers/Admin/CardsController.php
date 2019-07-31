@@ -32,7 +32,7 @@ class CardsController extends Controller
             'img' => 'required|file|image|unique:cards'
         ]);
 
-        $pathImg = public_path() . '/img/cards';
+        $pathImg = public_path() . '/img/gallery';
         $image = $request->file('img');
         $image->move($pathImg, $image->getClientOriginalName());
 
@@ -65,7 +65,7 @@ class CardsController extends Controller
 
         $image = $request->file('img');
         if ($image) {
-            $pathImg = public_path() . '/img/cards';
+            $pathImg = public_path() . '/img/gallery';
             $image->move($pathImg, $image->getClientOriginalName());
             $card->img = $image->getClientOriginalName();
         }
