@@ -42,7 +42,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <label for="#">Текущее изображение</label>
-                                            <img class="d-block w-100" src="/img/cards/{{$card->img}}" alt="#">
+                                            <img class="d-block w-100" src="/img/gallery/{{$card->img}}" alt="#">
                                         </div>
                                     </div>
                                 </div>
