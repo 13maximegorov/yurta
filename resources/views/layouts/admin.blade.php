@@ -178,6 +178,9 @@
                     <li class="nav-item">
                         <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-title"></i></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/settings" class="nav-link"><i class="link-icon icon-settings"></i><span class="menu-title">Настройки</span></a>
+                    </li>
                 </ul>
             </div>
         </div>

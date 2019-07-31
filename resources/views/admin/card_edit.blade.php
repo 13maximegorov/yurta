@@ -39,9 +39,17 @@
                                     <textarea type="text" class="form-control" id="descr"  name="text" placeholder="Описание">{{$card->text}}</textarea>
                                 </div>
                                 <div class="form-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <label for="#">Текущее изображение</label>
+                                            <img class="d-block w-100" src="/img/cards/{{$card->img}}" alt="#">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                         <div class="card">
                                             <div class="card-body">
-                                                <label for="#">Добавить изображение</label>
+                                                <label for="#">Изменить изображение</label>
                                                 <input type="file" class="dropify" name="img" data-max-file-size="30mb" />
                                             </div>
                                         </div>
