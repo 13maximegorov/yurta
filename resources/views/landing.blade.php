@@ -15,7 +15,7 @@
     </section>
     <section id="offer" class="section py-3">
         <div class="container-fluid">
-            <h3 class="text-center">We offer</h3>
+            <h3 class="text-center">О нас</h3>
             <span class="d-block text-center">clever treatment</span>
 
             <div class="gallery">
