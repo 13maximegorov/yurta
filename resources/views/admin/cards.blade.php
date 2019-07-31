@@ -14,7 +14,11 @@
                                 <div class="row pricing-table">
                                     @foreach($cards as $card)
                                     <div class="card_view col-md-6 col-lg-4 col-12 grid-margin stretch-card pricing-card">
-                                        <img class="w-100 d-block" src="/img/cards/{{$card->img}}" alt="">
+                                        <img class="card-img-top" src="/img/cards/{{$card->img}}" alt=""><br>
+                                        <div class="card-body">
+                                            <h5 class="d-inline-block">{{$card->title}}</h5>
+                                        </div>
+                                        <!-- position - absolute -->
                                         <div class="controls_card">
                                             <div class="dropdown dropup">
                                                 <button class="btn btn-primary icon-btn dropdown-toggle" type="button" id="dropdownMenuIconButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,6 +34,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--  end absolute   -->
+
                                     </div>
                                     @endforeach
                                 </div>
