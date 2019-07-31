@@ -18,7 +18,7 @@
 <div class="app">
     <header class="fixed-top header" id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-none py-1">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-none py-2">
                 <a class="navbar-brand" href="#">
                     <img src="img/yurta-logo.png" width="75" alt="Yurta">
                 </a>
