@@ -27,7 +27,7 @@ class CardsController extends Controller
         $cards = new Cards();
 
         $this->validate($request, [
-            'title' => 'required|max:55',
+            'title' => 'required|max:255',
             'text' => 'required',
             'img' => 'required|file|image|unique:cards'
         ]);
@@ -53,5 +53,32 @@ class CardsController extends Controller
     public function deleteCard($id) {
         Cards::find($id)->delete();
         return redirect('/yurtaboard/cards');
+    }
+
+    public function editCard(Request $request, $id) {
+        $card = Cards::find($id);
+
+        $this->validate($request, [
+            'title' => 'required|max:55',
+            'img' => 'file|image|unique:cards'
+        ]);
+
+        $image = $request->file('img');
+        if ($image) {
+            $pathImg = public_path() . '/img/cards';
+            $image->move($pathImg, $image->getClientOriginalName());
+            $card->img = $image->getClientOriginalName();
+        }
+        $card->title = strip_tags($request->title);
+        $card->text = strip_tags($request->text);
+        $card->url = '';
+        if ($request->is_active == "on") {
+            $card->is_active = '1';
+        }
+        $card->save();
+
+        Session::flash('success', 'Успешно редактировано');
+
+        return redirect("/yurtaboard/cards/edit/{$card->id}");
     }
 }
