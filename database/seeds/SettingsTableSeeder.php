@@ -17,7 +17,7 @@ class SettingsTableSeeder extends Seeder
         ]);
 
         DB::table('settings')->insert([
-            'key' => 'side.name',
+            'key' => 'site.name',
             'value' => 'Yurta'
         ]);
 

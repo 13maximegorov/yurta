@@ -23,8 +23,10 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('/cards/add', 'CardsController@cardsAdd');
     Route::post('/cards/add', 'CardsController@addCard');
     Route::get('/cards/edit/{id}', 'CardsController@cardEdit');
+    Route::post('/cards/edit/{id}', 'CardsController@editCard');
     Route::get('cards/delete/{id}', 'CardsController@deleteCard');
     Route::get('/settings', 'SettingsController@settings');
+    Route::post('/settings/edit', 'SettingsController@editSettings');
 });
 
 // Аутентификация
