@@ -130,6 +130,24 @@
     background-size: contain;
 }
 
+.tours .slick-next {
+    right: -50px;
+}
+
+.tours .slick-prev {
+    left: -50px
+}
+
+.gallery .slick-next {
+    background:url(https://image.flaticon.com/icons/svg/109/109617.svg) no-repeat;
+    background-size: contain;
+}
+
+.gallery .slick-prev {
+    background:url(https://image.flaticon.com/icons/svg/109/109618.svg) no-repeat;
+    background-size: contain;
+}
+
 .slick-next
 {
     right: -35px;
