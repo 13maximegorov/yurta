@@ -31,3 +31,8 @@
     right: 0;
 }
 
+.down_exit {
+    top: 30px!important;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.3)!important;
+}
+

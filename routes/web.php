@@ -27,6 +27,7 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('cards/delete/{id}', 'CardsController@deleteCard');
     Route::get('/settings', 'SettingsController@settings');
     Route::post('/settings/edit', 'SettingsController@editSettings');
+    Route::get('/sections', 'SectionController@sections');
 });
 
 // Аутентификация

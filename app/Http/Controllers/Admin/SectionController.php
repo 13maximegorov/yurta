@@ -14,4 +14,8 @@ class SectionController extends Controller
     public function multiply() {
 
     }
+
+    public function sections() {
+        return view('admin.sections');
+    }
 }

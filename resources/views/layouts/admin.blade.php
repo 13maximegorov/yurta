@@ -33,128 +33,15 @@
                 </div>
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between flex-grow-1">
                     <ul class="navbar-nav navbar-nav-right mr-0 ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <i class="icon-envelope mx-0"></i>
-                                <span class="count"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-                                <div class="dropdown-item">
-                                    <p class="mb-0 font-weight-normal float-left">У Вас 7 непрочитанных писем
-                                    </p>
-                                    <span class="badge badge-info badge-pill float-right">Просмотреть все</span>
-                                </div>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                                    </div>
-                                    <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-medium">Василий Корешкин
-                                            <span class="float-right font-weight-light small-text">1 минуту назад</span>
-                                        </h6>
-                                        <p class="font-weight-light small-text">
-                                            Встреча отменена
-                                        </p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                                    </div>
-                                    <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-medium">Петр-маркетинг
-                                            <span class="float-right font-weight-light small-text">15 минут назад</span>
-                                        </h6>
-                                        <p class="font-weight-light small-text">
-                                            Запускаем новый продукт
-                                        </p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <img src="https://via.placeholder.com/36x36" alt="image" class="profile-pic">
-                                    </div>
-                                    <div class="preview-item-content flex-grow">
-                                        <h6 class="preview-subject ellipsis font-weight-medium">Иван-директор
-                                            <span class="float-right font-weight-light small-text">18 минут назад</span>
-                                        </h6>
-                                        <p class="font-weight-light small-text">
-                                            Предстоит заседание правления
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                                <i class="icon-bell"></i>
-                                <span class="count"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                                <a class="dropdown-item py-3">
-                                    <p class="mb-0 font-weight-medium float-left">У Вас 4 новых уведомления
-                                    </p>
-                                    <span class="badge badge-pill badge-info float-right">Просмотреть все</span>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-success">
-                                            <i class="icon-exclamation mx-0"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <h6 class="preview-subject font-weight-normal text-dark mb-1">Ошибка приложения</h6>
-                                        <p class="font-weight-light small-text mb-0">
-                                            прямо сейчас
-                                        </p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-warning">
-                                            <i class="icon-bubble mx-0"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <h6 class="preview-subject font-weight-normal text-dark mb-1">Настройки</h6>
-                                        <p class="font-weight-light small-text mb-0">
-                                            Личное сообщение
-                                        </p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-info">
-                                            <i class="icon-user-following mx-0"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <h6 class="preview-subject font-weight-normal text-dark mb-1">Регистрация нового пользователя</h6>
-                                        <p class="font-weight-light small-text mb-0">
-                                            2 дня назад
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                                <img src="https://via.placeholder.com/39x39" alt="profile"/>
+{{--                                <img src="https://via.placeholder.com/39x39" alt="profile"/>--}}
+                                <i class="icon-people"></i>
                                 @if (\Illuminate\Support\Facades\Auth::check())
                                 <span class="nav-profile-name">{{\Illuminate\Support\Facades\Auth::user()->login}}</span>
                                 @endif
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a href="/yurtaboard/settings" class="dropdown-item">
-                                    <i class="icon-settings text-primary mr-2"></i>
-                                    Настройки
-                                </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown pb-0 down_exit" aria-labelledby="profileDropdown">
                                 <div class="dropdown-divider"></div>
                                 <a href="/yurtaboard/logout" class="dropdown-item">
                                     <i class="icon-logout text-primary mr-2"></i>
@@ -177,6 +64,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Галерея</span><i class="menu-title"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/sections" class="nav-link"><i class="link-icon icon-note"></i><span class="menu-title">Секции</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/settings" class="nav-link"><i class="link-icon icon-settings"></i><span class="menu-title">Настройки</span></a>
