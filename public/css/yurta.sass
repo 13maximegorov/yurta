@@ -1,0 +1,262 @@
+* 
+    font-size: 14px
+    // font-family: 'Poppins', sans-serif
+
+$green: #8FD2CB
+$dark: #4D4D4D
+$light: #EBECEC
+$d1: #758c9f
+$d2: #a8b7c2	
+$d3: #2c496b
+
+button:focus,
+input:focus
+    outline: none
+
+input
+    display: block
+    width: 100%
+    border: 1px solid #ccc
+    background: #f5f5f5
+    border-radius: 3px
+    padding: 8px 24px 9px 15px
+    font-size: 14px
+
+.app
+    overflow: hidden
+
+.header
+    border-bottom: 5px solid rgba(255, 255, 255, .1)
+    &__active 
+        background: rgba(5, 5, 5, .6)
+        border: none
+
+.color__green 
+    color: $green !important
+
+.color__dark 
+    color: $d3 !important
+
+.green__button,
+.dark__button,
+.transparent__button,
+.white__button
+    color: #fff
+    border-radius: 3px
+    padding: 8px 24px 9px 24px
+    margin: 0 5px
+    border: none
+
+.transparent__button
+    border: 2px solid #fff
+    background: none
+
+.white__button
+    color: black
+
+.green__button 
+    background: $green
+
+.dark__button 
+    background: $d3
+
+#welcome    
+    height: 100vh
+    background: url(../img/welcome.jpg) top center no-repeat
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+#welcome:before,
+.tour:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 0
+    background: rgba(0, 0, 0, .3)
+
+.navbar-brand
+    text-transform: uppercase
+    font-weight: bold
+
+.nav-top .nav-item .nav-link
+    margin-left: 20px
+    text-transform: uppercase
+    font-size: 14px
+
+.nav-top .nav-item .nav-link:hover 
+    color: $green
+
+.welcome-info 
+    color: #fff
+
+.welcome-info h1 
+    font-size: 72px
+    font-weight: 700
+
+.welcome-info p
+    font-size: 42px
+    font-weight: 400
+    line-height: 1.5
+    margin-bottom: 50px
+    color: rgba(255, 255, 255, .8)
+
+.welcome-info button 
+    border: 2px solid rgba(255, 255, 255, .5)
+    background: none
+    color: #fff
+    padding: 10px 45px
+    text-transform: capitalize
+    font-size: 16px
+    transition: .3s
+
+.welcome-info button:hover 
+    color: $green
+    border-color: $green
+
+.welcome-text 
+    position: absolute
+    bottom: 50px
+    left: 50%
+    transform: translateX(-50%)
+    color: #fff
+    z-index: 1
+    font-size: 16px
+    letter-spacing: 4px
+    border-bottom: 1px solid rgba(255, 255, 255, .5)
+    padding-bottom: 5px
+
+#offer
+    padding-left: 100px
+    padding-right: 100px
+
+.section h3
+    font-size: 42px
+    text-transform: uppercase
+    margin: 40px 0
+
+.section h4
+    font-size: 32px
+    color: $d1
+
+#offer span,
+#visa span
+    color: $green
+    font-weight: 500
+
+#offer p,
+#visa p
+    margin-top: 25px
+    text-align: center
+    font-size: 16px
+    line-height: 1.8
+    color: #bbb
+
+.equal 
+    overflow: hidden
+    position: relative
+    width: 100%
+    height: 225px
+    background: #ccc
+    margin-bottom: 30px
+
+.equal:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .3)
+
+.equal img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.equal h6 
+    position: absolute
+    bottom: 15px
+    left: 15px
+    color: #fff
+    font-size: 16px
+
+.nav-buttons button
+    width: 50px
+    height: 50px
+    line-height: 50px
+    border-radius: 50%
+    border: none
+    background: #f2f2f2
+    margin: 15px 10px
+    color: $d3
+
+#visa
+    background: #f6f6f6
+
+.ornament-1
+    width: 100%
+    height: 100px
+    background: url(../img/ornament-1.png) repeat
+    background-size: contain
+    opacity: .5
+
+.tour
+    position: relative
+    width: 100%
+    height: 450px
+    background: url(https://img1.goodfon.ru/original/2560x1600/c/49/hotel-aman-tokyo-japan.jpg) center center no-repeat
+    z-index: 1
+    &__title 
+        font-size: 42px
+        color: #fff
+        margin: 50px 0 15px 0
+    &__text 
+        color: #ddd
+        font-size: 16px
+
+.multiple-items img 
+    width: 200px
+    height: 170px
+
+.mi-text
+    height: 170px
+    background: #f5f5f5
+    padding: 10px 10px 5px 35px
+    
+// footer
+.footer
+    &__title
+        margin-top: 150px
+    &__bg
+        position: relative
+        width: 100%
+        height: 325px
+        background: url(../img/mouintain-black.png) no-repeat bottom
+        background-size: cover
+    &__section
+        display: flex
+        align-items: center
+        position: absolute
+        height: 50px
+        background: rgba(0, 0, 0, .5)
+        bottom: 0
+        left: 0
+        width: 100%
+    &__nav-social a
+        display: inline-block
+        width: 35px
+        height: 35px
+        line-height: 35px
+        background: #ccc
+        border-radius: 50%
+        margin: 0 5px
+        text-align: center
+        color: #fff
+
+// media
+@media screen and (max-width: 768px) 
+    #offer
+        padding-right: 50px
+        padding-left: 50px 
