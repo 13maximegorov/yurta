@@ -7,7 +7,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Редактирование карточки</h4>
+                            <h4 class="card-title">Редактирование</h4>
                             <form class="forms-sample" method="post" action="/yurtaboard/cards/add" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @if (count($errors) > 0)

@@ -172,11 +172,11 @@
         <div class="nav-bottom">
             <div class="container">
                 <ul class="nav page-navigation">
-                    <li class="nav-item">
+                    <li class="nav-item" id="yurtaindex">
                         <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Карточки</span><i class="menu-title"></i></a>
+                        <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Галерея</span><i class="menu-title"></i></a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/settings" class="nav-link"><i class="link-icon icon-settings"></i><span class="menu-title">Настройки</span></a>
