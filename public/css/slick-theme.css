@@ -130,11 +130,11 @@
     background-size: contain;
 }
 
-.tours .slick-next {
+.gallery .slick-next {
     right: -50px;
 }
 
-.tours .slick-prev {
+.gallery .slick-prev {
     left: -50px
 }
 
