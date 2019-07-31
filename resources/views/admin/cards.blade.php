@@ -29,7 +29,7 @@
 
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#">Просмотреть</a>
-                                                    <a class="dropdown-item" href="/yurtaboard/cards/edit/">Редактировать</a>
+                                                    <a class="dropdown-item" href="/yurtaboard/cards/edit/{{$card->id}}">Редактировать</a>
 
                                                 </div>
                                             </div>
