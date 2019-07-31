@@ -21,7 +21,7 @@
                                                     <i class="icon-pencil"></i>
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuIconButton6">
-                                                    <a class="dropdown-item" href="#">Удалить</a>
+                                                    <a class="dropdown-item" href="/yurtaboard/cards/delete/{{$card->id}}">Удалить</a>
 
                                                     <div class="dropdown-divider"></div>
                                                     <a class="dropdown-item" href="#">Просмотреть</a>

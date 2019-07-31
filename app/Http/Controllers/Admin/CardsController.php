@@ -44,4 +44,9 @@ class CardsController extends Controller
 
         return redirect('/yurtaboard/cards/add');
     }
+
+    public function deleteCard($id) {
+        Cards::find($id)->delete();
+        return redirect('/yurtaboard/cards');
+    }
 }

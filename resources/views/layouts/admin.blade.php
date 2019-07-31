@@ -146,7 +146,9 @@
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                                 <img src="https://via.placeholder.com/39x39" alt="profile"/>
-                                <span class="nav-profile-name">Александр Александрович</span>
+                                @if (\Illuminate\Support\Facades\Auth::check())
+                                <span class="nav-profile-name">{{\Illuminate\Support\Facades\Auth::user()->login}}</span>
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                                 <a href="/yurtaboard/settings" class="dropdown-item">
@@ -154,7 +156,7 @@
                                     Настройки
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item">
+                                <a href="/yurtaboard/logout" class="dropdown-item">
                                     <i class="icon-logout text-primary mr-2"></i>
                                     Выход
                                 </a>
