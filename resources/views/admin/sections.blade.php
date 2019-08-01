@@ -33,7 +33,7 @@
                                         </td>
                                         <td>
                                             <a href="#" class="btn btn-outline-primary mr-2">Посмотреть</a>
-                                            <a href="#" class="btn btn-outline-success">Редактировать</a>
+                                            <a href="/yurtaboard/sections/edit/1" class="btn btn-outline-success">Редактировать</a>
                                         </td>
                                     </tr>
                                     </tbody>

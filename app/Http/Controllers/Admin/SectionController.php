@@ -18,4 +18,8 @@ class SectionController extends Controller
     public function sections() {
         return view('admin.sections');
     }
+
+    public function edit() {
+        return view('admin.section_edit');
+    }
 }
