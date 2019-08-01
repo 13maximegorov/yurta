@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token()}}">
-    <title>Admin Panel</title>
+    <title>Панель управления</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="/admin1/vendors/iconfonts/simple-line-icon/css/simple-line-icons.css">
     <link rel="stylesheet" href="/admin1/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
@@ -28,8 +28,12 @@
         <div class="nav-top flex-grow-1">
             <div class="container d-flex flex-row h-100 align-items-center">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center">
-                    <a class="navbar-brand brand-logo" href="index.html"><img src="/admin1/images/logo.svg" alt="logo"/></a>
-                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/admin1/images/logo-mini.svg" alt="logo"/></a>
+                    <a class="navbar-brand brand-logo text-white" href="/yurtaboard">
+                        Панель управления
+                    </a>
+                    <a class="navbar-brand brand-logo-mini text-white" href="/yurtaboard">
+                        Панель управления
+                    </a>
                 </div>
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between flex-grow-1">
                     <ul class="navbar-nav navbar-nav-right mr-0 ml-auto">
