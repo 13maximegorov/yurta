@@ -35,18 +35,6 @@
                                     <input type="text" class="form-control" id="title" name="title" placeholder="Название" value="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="descr">Описание</label>
-                                    <textarea id="my-editor" name="content" class="form-control">{!! old('content', 'test editor content') !!}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <label for="#">Текущее изображение</label>
-                                            <img class="d-block w-100" src="/img/gallery/" alt="#">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                         <div class="card">
                                             <div class="card-body">
                                                 <label for="#">Изменить изображение</label>
@@ -54,12 +42,15 @@
                                             </div>
                                         </div>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" name="is_active">
-                                        Не показывать
-                                    </label>
-                                </div>
+                                <div class="form-group">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <label for="#">Текущее изображение</label>
+                                                <img class="d-block w-100" src="/img/gallery/" alt="#">
+                                            </div>
+                                        </div>
+                                    </div>
+                            
                                 <button type="submit" class="btn btn-primary mr-2">Редактировать</button>
                                 <a href="/yurtaboard/cards/" class="btn btn-light">Отменить</a>
                             </form>
