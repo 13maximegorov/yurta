@@ -27,8 +27,7 @@ class MainController extends Controller
                     'section_content.caption',
                     'section_content.background',
                     'section_content.slides',
-                    'section_content.text',
-                )->get();
+                    'section_content.text')->get();
 
         $keys = ['welcome', 'offer'];
         foreach ($keys as $key => $value) {
