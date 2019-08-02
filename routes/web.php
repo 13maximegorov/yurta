@@ -28,8 +28,9 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::post('/settings/edit', 'SettingsController@editSettings');
     Route::get('/sections', 'SectionController@sections');
 
-    Route::get('/sections/edit/welcome', 'SectionController@edit');
-    Route::get('/sections/edit/about', 'SectionController@about');
+    Route::get('/sections/edit/welcome/{id}', 'SectionController@edit');
+    Route::get('/sections/edit/about/{id}', 'SectionController@about');
+    Route::get('/sections/edit/slider/{id}', 'SectionController@slider');
 
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');

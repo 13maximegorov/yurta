@@ -4,19 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Section;
 
 class SectionController extends Controller
 {
-    public function single() {
-
-    }
-
-    public function multiply() {
-
-    }
-
     public function sections() {
-        return view('admin.sections');
+        $sections = Section::all();
+        return view('admin.sections', [
+            'sections' => $sections
+        ]);
     }
 
     public function edit() {
