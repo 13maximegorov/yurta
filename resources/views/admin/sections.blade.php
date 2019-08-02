@@ -19,8 +19,8 @@
                                     </thead>
                                     <tbody>
                                         <?php if ($sections): ?>
+                                        <?php $i = 1; ?>
                                         <?php foreach($sections as $section): ?>
-                                            <?php $i = 1; ?>
                                             <tr>
                                                 <td><?=$i++?></td>
                                                 <td class="w-100">{{ $section->name }}</td>
