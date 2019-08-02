@@ -36,3 +36,9 @@
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.3)!important;
 }
 
+.img_edit_section {
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
