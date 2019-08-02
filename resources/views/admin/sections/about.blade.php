@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="caption">Подпись</label>
-                                    <input type="text" class="form-control" id="caption" name="caption" placeholder="Слоган" value="">
+                                    <input type="text" class="form-control" id="caption" name="caption" placeholder="Подпись" value="">
                                 </div>
                                 <div class="form-group">
                                     <label for="text">Текст</label>
