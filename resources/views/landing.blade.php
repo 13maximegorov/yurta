@@ -5,13 +5,23 @@
         <div class="row justify-content-center align-items-center" style="height: 100vh">
             <div class="col-md-12">
                 <div class="d-table mx-auto text-center welcome-info">
-                    <h1>Yurta</h1>
-                    <p>Нет предела тому, что вы можете достичь</p>
+                    <?php 
+                        $title = json_decode ($data['welcome']->titles)
+                    ?>
+                    <h1>{{ $title->h1 }}</h1>
+                    <p>{{ $data['welcome']->slogan }}</p>
                     <button>Начнём</button>
+                    <div class="alert alert-danger text-left">
+                        <code>
+                            <?php deb($data) ?>
+                        </code>
+                    </div>
                 </div>
             </div>
         </div>
-        <span class="welcome-text">Смотреть видео?</span>
+        <span class="welcome-text">
+            {{ $data['welcome']->caption }}
+        </span>
     </section>
     <section id="offer" class="section py-3">
         <div class="container-fluid">

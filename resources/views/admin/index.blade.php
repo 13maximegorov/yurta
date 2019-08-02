@@ -49,23 +49,8 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Отчет о доходах</h4>
-              <div class="w-75 mx-auto">
-                <canvas id="earning-report" width="100" height="100"></canvas>
-              </div>
-              <div class="py-4 d-flex justify-content-center align-items-end">
-                <h1 class="text-center text-md-left mb-0">1.2M</h1>
-                <p class="text-muted mb-0 ml-2">Всего</p>
-              </div>
-              <div id="earning-report-legend" class="earning-report-legend"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-9 grid-margin stretch-card">
+      {{-- <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
           <div class="card">
             <div class="row h-100">
               <div class="col-md-5 border-right">
@@ -144,8 +129,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+      </div> --}}
+      {{-- <div class="row">
         <div class="col-md-7 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
@@ -241,6 +226,6 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
 @endsection

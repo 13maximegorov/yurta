@@ -20,8 +20,8 @@ class CreateSectionContentTable extends Migration
             $table->string('slogan');
             $table->string('caption');
             $table->string('background', 255);
-            $table->json('slides');
-            $table->string('text');
+            $table->json('slides')->nullable();
+            $table->string('text')->nullable();
             $table->timestamps();
         });
     }
