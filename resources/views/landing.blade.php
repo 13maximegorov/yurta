@@ -11,11 +11,6 @@
                     <h1>{{ $title->h1 }}</h1>
                     <p>{{ $data['welcome']->slogan }}</p>
                     <button>Начнём</button>
-                    <div class="alert alert-danger text-left">
-                        <code>
-                            <?php deb($data) ?>
-                        </code>
-                    </div>
                 </div>
             </div>
         </div>
