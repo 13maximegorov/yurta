@@ -28,8 +28,10 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::post('/settings/edit', 'SettingsController@editSettings');
     Route::get('/sections', 'SectionController@sections');
 
-    Route::get('/sections/edit/welcome/{id}', 'SectionController@edit');
+    Route::get('/sections/edit/welcome/{id}', 'SectionController@welcome');
+    Route::post('/sections/edit/welcome/{id}', 'SectionController@editWelcome');
     Route::get('/sections/edit/about/{id}', 'SectionController@about');
+    Route::post('/sections/edit/about/{id}', 'SectionController@editAbout');
     Route::get('/sections/edit/slider/{id}', 'SectionController@slider');
 
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');

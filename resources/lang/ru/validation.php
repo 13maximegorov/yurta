@@ -197,5 +197,8 @@ return [
         'site_meta_desc'        => 'Описание',
         'site_meta_key'         => 'Ключевые слова',
         'site_meta_author'      => 'Автор',
+        'slogan'                => 'Слоган',
+        'caption'               => 'Подпись',
+        'title_h2'              => 'Подзаголовок'
     ],
 ];
