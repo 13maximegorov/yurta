@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/admin1/css/style.css">
     <link rel="stylesheet" href="/admin1/css/style1.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="/admin1/images/favicon.png" />
+    <link rel="shortcut icon" href="../yurta-favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -64,7 +64,7 @@
             <div class="container">
                 <ul class="nav page-navigation">
                     <li class="nav-item" id="yurtaindex">
-                        <a href="/yurtaboard/" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
+                        <a href="/yurtaboard" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Галерея</span><i class="menu-title"></i></a>
@@ -124,7 +124,7 @@
   };
 </script>
 <script>
-    CKEDITOR.replace('my-editor', options);
+    //CKEDITOR.replace('my-editor', options);
 </script>
 </body>
 

@@ -1,18 +1,24 @@
+<?php 
+    foreach (App\Http\Controllers\MainController::$settings  as $k) {
+        $settings[$k->key] = $k->value;
+    }
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="описание">
-    <meta name="keywords" content="ключевые слова">
-    <meta name="author" content="автор">
+    <meta name="description" content="{{ $settings['site.meta.desc'] }}">
+    <meta name="keywords" content="{{ $settings['site.meta.key'] }}">
+    <meta name="author" content="{{ $settings['site.meta.author'] }}">
+    <link rel="shortcut icon" href="yurta-favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/yurta.css">
-    <title>Yurta</title>
+    <title>{{ $settings['site.title'] }}</title>
 </head>
 <body>
 <div class="app">
@@ -88,7 +94,7 @@
         <div class="footer__bg">
             <div class="footer__section">
                 <div class="container">
-                    <span class="text-white">&copy; 2019 Yurta. All rights reserved. </span>
+                    <span class="text-white">&copy; 2019 {{ $settings['site.footer'] }} </span>
                 </div>
             </div>
         </div>

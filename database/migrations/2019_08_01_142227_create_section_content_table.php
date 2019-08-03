@@ -16,10 +16,10 @@ class CreateSectionContentTable extends Migration
         Schema::create('section_content', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('s_id');
-            $table->json('titles');
-            $table->string('slogan');
-            $table->string('caption');
-            $table->string('background', 255);
+            $table->json('titles'); 
+            $table->string('slogan')->nullable();
+            $table->string('caption')->nullable();
+            $table->string('background', 255)->nullable();
             $table->json('slides')->nullable();
             $table->string('text')->nullable();
             $table->timestamps();

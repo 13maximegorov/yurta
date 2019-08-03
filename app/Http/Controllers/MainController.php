@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Settings;
 
 class MainController extends Controller
 {
+    public static $settings = [];
+
+    public function __construct() {
+        self::$settings = Settings::all();
+    }
+
     public function index() {
         $t1 = 'sections';
         $t2 = 'section_content';

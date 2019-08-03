@@ -22,4 +22,8 @@ class SectionController extends Controller
     public function about() {
         return view('admin.sections.about');
     }
+
+    public function slider() {
+        return view('admin.sections.slider');
+    }
 }
