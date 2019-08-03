@@ -7,10 +7,7 @@
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Добавление</h4>
-{{--                            <p class="card-description">--}}
-{{--                                Basic form layout--}}
-{{--                            </p>--}}
+                            <h4 class="card-title">Редактирование секции</h4>
                             <form class="forms-sample" method="post" action="/yurtaboard/cards/add" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @if (count($errors) > 0)
@@ -34,29 +31,27 @@
                                     </div>
                                 @endif
                                 <div class="form-group">
-                                    <label for="title">Заголовок</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Название">
+                                    <label for="title1">Заголовок</label>
+                                    <input type="text" id="title1" class="form-control" name="title_h1" placeholder="Название" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="descr">Описание</label>
-                                    <textarea type="text" class="form-control" id="descr"  name="text" maxlength="300" placeholder="Описание"></textarea>
+                                    <label for="title2">Подзаголовок</label>
+                                    <input type="text" id="title2" class="form-control" name="title_h2" placeholder="Подзаголовок" value="">
                                 </div>
                                 <div class="form-group">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <label for="#">Добавить изображение</label>
-                                                <input type="file" class="dropify" name="img" data-max-file-size="30mb" />
-                                            </div>
-                                        </div>
+                                    <label for="slogan">Слоган</label>
+                                    <input type="text" id="slogan" class="form-control" name="slogan" placeholder="Слоган" value="" required>
                                 </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" name="is_active">
-                                        Не показывать
-                                    </label>
+                                <div class="form-group">
+                                    <label for="caption">Подпись</label>
+                                    <input type="text" class="form-control" id="caption" name="caption" placeholder="Подпись" value="">
                                 </div>
-                                <button type="submit" class="btn btn-primary mr-2">Добавить</button>
-                                <a href="/yurtaboard/cards/" class="btn btn-light">Отменить</a>
+                                <div class="form-group">
+                                    <label for="text">Текст</label>
+                                    <textarea type="text" class="form-control" id="text"  name="text" maxlength="300" placeholder="Ваш текст" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Редактировать</button>
+                                <a href="/yurtaboard/sections/" class="btn btn-light">Отменить</a>
                             </form>
                         </div>
                     </div>

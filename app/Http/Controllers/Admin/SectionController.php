@@ -20,6 +20,10 @@ class SectionController extends Controller
     }
 
     public function edit() {
-        return view('admin.section_edit');
+        return view('admin.sections.welcome');
+    }
+
+    public function about() {
+        return view('admin.sections.about');
     }
 }

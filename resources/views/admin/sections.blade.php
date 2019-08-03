@@ -24,6 +24,9 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+
+                                    {{--  start --}}
+
                                     <tr>
                                         <td>
                                             1
@@ -36,6 +39,9 @@
                                             <a href="/yurtaboard/sections/edit/1" class="btn btn-outline-success">Редактировать</a>
                                         </td>
                                     </tr>
+
+                                    {{--  end --}}
+
                                     </tbody>
                                 </table>
                             </div>
