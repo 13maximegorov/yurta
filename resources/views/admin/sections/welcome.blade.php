@@ -8,7 +8,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Редактирование секции</h4>
-                            <form class="forms-sample" method="post" action="/yurtaboard/cards/add" enctype="multipart/form-data">
+                            <form class="forms-sample" method="post" action="/yurtaboard/sections/edit/welcome/{{$section_content->s_id}}" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @if (count($errors) > 0)
                                     <div class="alert alert-danger" role="alert">
@@ -32,21 +32,21 @@
                                 @endif
                                 <div class="form-group">
                                     <label for="title">Название</label>
-                                    <input type="text" id="title" class="form-control" name="title" placeholder="Название" value="" required>
+                                    <input type="text" id="title" class="form-control" name="title" placeholder="Название" value="{{json_decode($section_content->titles)->h1}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="slogan">Слоган</label>
-                                    <input type="text" id="slogan" class="form-control" name="slogan" placeholder="Слоган" value="" required>
+                                    <input type="text" id="slogan" class="form-control" name="slogan" placeholder="Слоган" value="{{$section_content->slogan}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="caption">Подпись</label>
-                                    <input type="text" class="form-control" id="caption" name="caption" placeholder="Подпись" value="">
+                                    <input type="text" class="form-control" id="caption" name="caption" placeholder="Подпись" value="{{$section_content->caption}}">
                                 </div>
                                 <div class="form-group">
                                         <div class="card">
                                             <div class="card-body">
                                                 <label for="#">Изменить изображение</label>
-                                                <input type="file" class="dropify" name="img" data-max-file-size="30mb" required />
+                                                <input type="file" class="dropify" name="img" data-max-file-size="30mb"/>
                                             </div>
                                         </div>
                                 </div>
@@ -54,7 +54,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <label for="#">Текущее изображение</label>
-                                                <img class="mx-auto img_edit_section d-block w-100" src="/img/welcome.jpg" alt="#">
+                                                <img class="mx-auto img_edit_section d-block w-100" src="/img/{{$section_content->background}}" alt="#">
                                             </div>
                                         </div>
                                     </div>

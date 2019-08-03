@@ -11,37 +11,26 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <thead>
-                                    <tr>
-                                        <th>
-                                            #
-                                        </th>
-                                        <th>
-                                            Название
-                                        </th>
-                                        <th>
-                                            Действие
-                                        </th>
-                                    </tr>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Название</th>
+                                            <th>Действие</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-
-                                    {{--  start --}}
-
-                                    <tr>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td class="w-100">
-                                            Herman Beck
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-outline-primary mr-2">Посмотреть</a>
-                                            <a href="/yurtaboard/sections/edit/1" class="btn btn-outline-success">Редактировать</a>
-                                        </td>
-                                    </tr>
-
-                                    {{--  end --}}
-
+                                        <?php if ($sections): ?>
+                                        <?php $i = 1; ?>
+                                        <?php foreach($sections as $section): ?>
+                                            <tr>
+                                                <td><?=$i++?></td>
+                                                <td class="w-100">{{ $section->name }}</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-outline-primary mr-2">Посмотреть</a>
+                                                <a href="/yurtaboard/sections/edit/{{ $section->type }}/{{ $section->id }}" class="btn btn-outline-success">Редактировать</a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
                                     </tbody>
                                 </table>
                             </div>
