@@ -1,130 +1,7 @@
-/*------------------------------------------------------------------
- [Master Stylesheet]
-
-  Project:	CloudUi Admin
-  Version:	1.0.0
--------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
-  ===== Table of Contents =====
-
-  * Bootstrap functions
-  * Template variables
-  * SCSS Compass Functions
-  * Boostrap Main SCSS
-  * Template mixins
-    + Animation Mixins
-    + Accordion Mixins
-    + Background Mixins
-    + Badges Mixins
-    + BlockQuote Mixins
-    + Buttons Mixins
-    + Breadcrumbs Mixins
-    + Cards Mixins
-    + Color Functions Mixins
-    + Menu Mixins
-    + Miscellaneous Mixins
-    + No-ui-slider Mixins
-    + Pagination Mixins
-    + Popover Mixins
-    + Tabs Mixins
-    + Tooltip Mixins
-    + Text Mixins
-  * Core Styles
-    + Reset Styles
-    + Fonts
-    + Functions
-    + Typography
-    + Miscellaneous
-    + Footer
-    + Layouts
-    + Utilities
-    + Demo styles
-    + Dashboard
-  * Components
-    + Accordions
-    + Badges
-    + Bootstrap Alerts
-    + Boostrap Progress
-    + Buttons
-    + Breadcrumbs
-    + Cards
-    + Checkboxes and Radios
-    + Dropdowns
-    + Forms
-    + Google Maps
-    + Icons
-    + Lists
-    + Loaders
-    + Modals
-    + New Accounts
-    + Pagination
-    + Popovers
-    + Portfolio
-    + Preview
-    + Pricing Table
-    + Tables
-    + Tabs
-    + Tooltips
-    + Timeline
-    + Todo List
-    + User Profile
-  * Email
-    + Mail Sidebar
-    + Mail List Container
-    + Message Content
-  * Plugin Overrides
-    + Ace Editor
-    + Avgrund Popup
-    + Bootstrap Tour
-    + Chartjs
-    + Chartist
-    + CodeMirror
-    + Colcade
-    + Colorpicker
-    + Context Menu
-    + Data Tables
-    + Datepicker
-    + Dropify
-    + Dropzone
-    + Flot chart
-    + Full Calendar
-    + Google Charts
-    + Icheck
-    + Jquery File Upload
-    + Js-grid
-    + Jvectormap
-    + Light Gallery
-    + Listify
-    + No-ui-slider
-    + Owl-carousel
-    + Progressbar-js
-    + Pws-tabs
-    + Quill Editor
-    + Rating
-    + Select2
-    + Summernote Editor
-    + SweetAlert
-    + Switchery
-    + Tags
-    + TinyMCE Editor
-    + Toast
-    + Typeahead
-    + Wysi Editor
-    + X-editable
-    + Wizard
-  * Screens
-    + Auth
-    + Error
-    + Lock Screen
-    + Landing
-    + Profile Page
--------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/* === Import Bootstrap functions and variables === */
-/*-------------------------------------------------------------------*/
-/* === Import template variables === */
-/*-------------------------------------------------------------------*/
-/* === SCSS Compass Functions === */
+@import url(../../fonts/HyundaiSans/stylesheet.css); 
+* {
+  font-family: 'Hyundai Sans Head Office', sans-serif;
+}
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -18052,42 +17929,6 @@ input:focus {
   outline: none;
 }
 
-/*Fonts*/
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/openSans/OpenSans-Light.woff2") format("woff2"), url("../fonts/openSans/OpenSans-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/openSans/OpenSans-Regular.woff2") format("woff2"), url("../fonts/openSans/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/openSans/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/openSans/OpenSans-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/openSans/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/openSans/OpenSans-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url("../fonts/openSans/OpenSans-Bold.woff2") format("woff2"), url("../fonts/openSans/OpenSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-
 .text-twitter {
   color: #1da1f2;
 }
@@ -18172,7 +18013,7 @@ input:focus {
 :root,
 body {
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-weight: 400;
 }
 
@@ -18188,7 +18029,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   line-height: 1;
   color: #090e40;
 }
@@ -18541,11 +18382,12 @@ pre {
 }
 
 .navbar.horizontal-layout {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .navbar.horizontal-layout .nav-top {
-  background: #090e40;
+  /* background: #090e40; */
+  background: #77b9b2;
   height: 60px;
 }
 
@@ -18696,7 +18538,7 @@ pre {
 }
 
 .navbar.horizontal-layout .nav-top .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item .preview-subject {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
@@ -19301,7 +19143,7 @@ pre {
   -ms-transition: all 0.25s ease;
   border-top: 1px solid rgba(0, 0, 0, 0.04);
   font-size: calc(0.875rem - 0.05rem);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .footer a {
@@ -19996,7 +19838,7 @@ pre {
   font-weight: initial;
   line-height: 1.5;
   padding: .25rem .5625rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-weight: 300;
 }
 
@@ -20404,7 +20246,7 @@ pre {
 /* Buttons */
 .btn, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .wizard > .actions a {
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .btn i, .ajax-upload-dragdrop .ajax-file-upload i, .swal2-modal .swal2-buttonswrapper .swal2-styled i, .wizard > .actions a i {
@@ -22184,7 +22026,7 @@ pre {
 .tt-query,
 .typeahead {
   border: 1px solid #f2f2f2;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 0.75rem;
   padding: 0.56rem 0.75rem;
   line-height: 14px;
@@ -22276,7 +22118,7 @@ select.typeahead {
   -webkit-align-items: center;
   align-items: center;
   padding: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 0.875rem;
 }
 
@@ -24005,7 +23847,7 @@ ul li {
 }
 
 .preview-list .preview-item .preview-item-content p .content-category {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   padding-right: 15px;
   border-right: 1px solid #f2f2f2;
 }
@@ -24064,7 +23906,7 @@ ul li {
 .pricing-table .pricing-card .pricing-card-body .plan-features li {
   text-align: left;
   padding: 4px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 0.875rem;
 }
 
@@ -24148,7 +23990,7 @@ ul li {
 /* Tabs */
 .nav-pills .nav-item .nav-link,
 .nav-tabs .nav-item .nav-link {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   line-height: 1;
   font-size: 0.875rem;
   color: #000;
@@ -24163,7 +24005,7 @@ ul li {
 }
 
 .tab-content {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 0.875rem;
   line-height: 1.71;
 }
@@ -24409,7 +24251,7 @@ ul li {
 }
 
 .tooltip .tooltip-inner {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .tooltip-primary .tooltip-inner {
@@ -24850,7 +24692,7 @@ ul li {
   padding: 11px 25px;
   background: #f3f5f6;
   width: 80%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 13px;
   font-weight: 300;
   border-radius: 4px;
@@ -24858,7 +24700,7 @@ ul li {
 
 .horizontal-timeline .time-frame .event .event-info {
   margin-top: 0.8rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #959595;
@@ -25192,7 +25034,7 @@ ul li {
   font-size: 0.875rem;
   color: #439aff;
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .email-wrapper .mail-sidebar .menu-bar .online-status .status {
@@ -25267,7 +25109,7 @@ ul li {
 
 .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 0.875rem;
   line-height: 1;
 }
@@ -25320,7 +25162,7 @@ ul li {
 .email-wrapper .mail-list-container .mail-list .content .sender-name {
   margin-bottom: 0;
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   max-width: 95%;
 }
 
@@ -25369,17 +25211,17 @@ ul li {
 
 .email-wrapper .message-body .sender-details .details .msg-subject {
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .email-wrapper .message-body .sender-details .details .sender-email {
   margin-bottom: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .email-wrapper .message-body .sender-details .details .sender-email i {
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   margin: 0 1px 0 7px;
 }
 
@@ -25458,7 +25300,7 @@ ul li {
   left: 50%;
   z-index: 1000;
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-weight: initial;
   line-height: 1.85;
   border-radius: 10px;
@@ -25471,7 +25313,7 @@ ul li {
 
 .avgrund-popin p {
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-weight: initial;
 }
 
@@ -25569,7 +25411,7 @@ body.avgrund-active {
 .tour-tour {
   padding: 0;
   border: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   background: #fff;
 }
 
@@ -25577,7 +25419,7 @@ body.avgrund-active {
   background: #439aff;
   color: #fff;
   font-size: 0.8125rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   padding: 0.75rem;
 }
 
@@ -25913,7 +25755,7 @@ body.avgrund-active {
 .context-menu-list .context-menu-item span {
   color: #000;
   font-size: 0.75rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .context-menu-list .context-menu-item.context-menu-hover {
@@ -26062,7 +25904,7 @@ body.avgrund-active {
 
 .datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th.dow,
 .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th.dow {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   color: #000;
   font-size: 0.875rem;
   font-weight: initial;
@@ -26549,7 +26391,7 @@ body.avgrund-active {
 
 .jsgrid .jsgrid-table th {
   font-weight: initial;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number] {
@@ -26716,7 +26558,7 @@ body.avgrund-active {
 }
 
 .noUi-target .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   border-radius: 4px;
   border: none;
   line-height: 1;
@@ -26743,7 +26585,7 @@ body.avgrund-active {
 .noUi-target .noUi-pips .noUi-value {
   color: #000;
   font-size: 0.94rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 /* Slider Color variations */
@@ -27246,7 +27088,7 @@ body.avgrund-active {
 .swal2-modal .swal2-title {
   font-size: 25px;
   line-height: 1;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   color: #000;
   font-weight: initial;
   margin-bottom: 0;
@@ -27270,7 +27112,7 @@ body.avgrund-active {
 
 .swal2-modal .swal2-content {
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   color: #000;
   font-weight: initial;
   margin-top: 11px;
@@ -27671,7 +27513,7 @@ div.tagsinput span.tag a {
   -moz-border-radius: 5px;
   border-radius: 5px;
   font-size: 0.875rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .wizard > .steps a:hover {
@@ -28052,7 +27894,7 @@ div.tagsinput span.tag a {
 }
 
 .auth.theme-one .auto-form-wrapper .form-group .submit-btn {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 13px;
   padding: 12px 8px;
   font-weight: 600;
@@ -28216,7 +28058,7 @@ div.tagsinput span.tag a {
 }
 
 .auth.theme-two .auto-form-wrapper form .form-group .submit-btn {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-size: 13px;
   padding: 11px 33px;
   font-weight: 600;
@@ -28321,13 +28163,13 @@ div.tagsinput span.tag a {
 
 .profile-page .profile-header .profile-info .profile-user-name {
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
   font-weight: 600;
 }
 
 .profile-page .profile-header .profile-info .profile-user-designation {
   margin-bottom: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hyundai Sans Head Office", sans-serif;
 }
 
 .profile-page .profile-header .profile-info .br-wrapper {

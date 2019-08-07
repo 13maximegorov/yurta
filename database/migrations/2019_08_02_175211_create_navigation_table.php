@@ -17,6 +17,7 @@ class CreateNavigationTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('url');
+            $table->integer('position');
             $table->timestamps();
         });
     }

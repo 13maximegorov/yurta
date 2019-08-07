@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Settings;
+use App\{Settings, Navigation};
 
 class MainController extends Controller
 {
     public static $settings = [];
+    public static $nav = [];
 
     public function __construct() {
         self::$settings = Settings::all();
+        self::$nav = Navigation::all();
     }
 
     public function index() {

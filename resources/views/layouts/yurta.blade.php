@@ -1,4 +1,5 @@
 <?php 
+    $nav = App\Http\Controllers\MainController::$nav;
     foreach (App\Http\Controllers\MainController::$settings  as $k) {
         $settings[$k->key] = $k->value;
     }
@@ -32,32 +33,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav nav-top ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Сервисы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Работа</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Трансферы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Страхование</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Visa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Лицензия</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
-                        </li>
-                    </ul>
+                    @if ($nav)
+                        <ul class="navbar-nav nav-top ml-auto">
+                            @foreach ($nav as $n)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/page/{{ $n->url }}">
+                                        {{ $n->title }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
             </nav>
         </div>

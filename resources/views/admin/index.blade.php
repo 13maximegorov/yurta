@@ -8,34 +8,34 @@
           <div class="card card-statistics">
             <div class="card-body p-0">
               <div class="row">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                   <div class="d-flex justify-content-between border-right card-statistics-item">
                     <div>
-                      <h1>28893</h1>
-                      <p class="text-muted mb-0">Всего счетов</p>
+                      <h1>{{ $counter['gallery'] }}</h1>
+                      <p class="text-muted mb-0">Изображений в галереи</p>
                     </div>
                     <i class="icon-layers text-primary icon-lg"></i>
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                   <div class="d-flex justify-content-between border-right card-statistics-item">
                     <div>
-                      <h1>217</h1>
-                      <p class="text-muted mb-0">Новые пользователи</p>
+                      <h1>21</h1>
+                      <p class="text-muted mb-0">Туры</p>
                     </div>
                     <i class="icon-people text-primary icon-lg"></i>
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                   <div class="d-flex justify-content-between border-right card-statistics-item">
                     <div>
-                      <h1>6875</h1>
-                      <p class="text-muted mb-0">Уникальные посещения</p>
+                      <h1>64</h1>
+                      <p class="text-muted mb-0">Подписок</p>
                     </div>
                     <i class="icon-pin text-primary icon-lg"></i>
                   </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                {{-- <div class="col-md-6 col-lg-3">
                   <div class="d-flex justify-content-between card-statistics-item">
                     <div>
                       <h1>45596</h1>
@@ -43,7 +43,7 @@
                     </div>
                     <i class="icon-refresh text-primary icon-lg"></i>
                   </div>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>

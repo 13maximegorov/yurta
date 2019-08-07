@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Session;
 
 class SectionController extends Controller
 {
+
+    // получение секции
     public function sections() {
         $sections = Section::all();
         return view('admin.sections', [
@@ -18,11 +20,13 @@ class SectionController extends Controller
         ]);
     }
 
+    // получение контента секции - welcome
     public function welcome($id) {
         $section_content = SectionContent::where('s_id', $id)->first();
         return view('admin.sections.welcome', ['section_content' => $section_content]);
     }
-
+    
+    // редактирование контента секции - welcome
     public function editWelcome(Request $request, $id) {
         $section_content = SectionContent::where('s_id', $id)->first();
 
@@ -79,7 +83,4 @@ class SectionController extends Controller
         return view('admin.sections.slider');
     }
 
-    public function slider() {
-        return view('admin.sections.slider');
-    }
 }

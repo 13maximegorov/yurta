@@ -13,6 +13,7 @@
 
 // Yurta
 Route::get('/', 'MainController@index');
+Route::get('/page/{alias}', 'PageController@index');
 
 // Панель управления Yurtaboard
 Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'notAdmin'], function () {

@@ -13,35 +13,38 @@ class NavigationTableSeeder extends Seeder
     {
         DB::table('navigation')->insert([
             'title' => 'о нас',
-            'url' => ''
+            'url' => 'about',
+            'position' => 1
         ]);
         DB::table('navigation')->insert([
             'title' => 'сервисы',
-            'url' => ''
+            'url' => 'services',
+            'position' => 2
         ]);
         DB::table('navigation')->insert([
             'title' => 'работа',
-            'url' => ''
+            'url' => 'work',
+            'position' => 3
         ]);
         DB::table('navigation')->insert([
             'title' => 'трансферы',
-            'url' => ''
-        ]);
-        DB::table('navigation')->insert([
-            'title' => 'страхование',
-            'url' => ''
+            'url' => 'transfers',
+            'position' => 4
         ]);
         DB::table('navigation')->insert([
             'title' => 'visa',
-            'url' => ''
+            'url' => 'visa',
+            'position' => 5
         ]);
         DB::table('navigation')->insert([
             'title' => 'лицензия',
-            'url' => ''
+            'url' => 'license',
+            'position' => 6
         ]);
         DB::table('navigation')->insert([
             'title' => 'контакты',
-            'url' => ''
+            'url' => 'contacts',
+            'position' => 7
         ]);
     }
 }
