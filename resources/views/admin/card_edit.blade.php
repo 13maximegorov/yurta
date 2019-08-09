@@ -8,7 +8,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Редактирование</h4>
-                            <form class="forms-sample" method="post" action="/yurtaboard/cards/edit" enctype="multipart/form-data">
+                            <form class="forms-sample" method="post" action="/yurtaboard/cards/edit/{{ $card->id }}" enctype="multipart/form-data">
                                 {{csrf_field()}}
                                 @if (count($errors) > 0)
                                     <div class="alert alert-danger" role="alert">
