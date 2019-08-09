@@ -41,7 +41,11 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
 });
 
 // Аутентификация
-Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'isAdmin'], function () {
+Route::group([
+    'prefix' => '/yurtaboard', 
+    'namespace' => 'Admin', 
+    'middleware' => 'isAdmin'
+], function () {
     Route::get('/login', 'JoinController@index');
     Route::post('/login', 'JoinController@login');
 });

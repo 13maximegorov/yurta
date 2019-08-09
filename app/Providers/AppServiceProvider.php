@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Settings;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // call settings
+        config([
+            'site' => $this->AppSettings()
+        ]);
+
+    }
+
+    public function AppSettings() {
+        $settings = Settings::all();
+        foreach ($settings  as $k) {
+            $setter[$k->key] = $k->value;
+        }
+        return $setter;
     }
 }

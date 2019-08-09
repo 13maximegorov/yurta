@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Top Navigation 
+        App\Providers\YurtaServiceProvider::class,
+
     ],
 
     /*

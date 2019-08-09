@@ -4,18 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\{Settings, Navigation};
+use App\Cards;
 
 class MainController extends Controller
 {
-    public static $settings = [];
-    public static $nav = [];
-
-    public function __construct() {
-        self::$settings = Settings::all();
-        self::$nav = Navigation::all();
-    }
-
     public function index() {
         $t1 = 'sections';
         $t2 = 'section_content';
@@ -42,6 +34,13 @@ class MainController extends Controller
         foreach ($keys as $key => $value) {
             $rows[$value] = $data[$key];
         }
-        return view('landing', ['data' => $rows]);
+        return view('landing', [
+            'data' => $rows,
+            'gallery' => $this->getGallery()
+        ]);
+    }
+
+    public function getGallery() {
+        return Cards::orderBy('id', 'DESC')->get();
     }
 }

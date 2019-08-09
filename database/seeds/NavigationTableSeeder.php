@@ -17,7 +17,7 @@ class NavigationTableSeeder extends Seeder
             'position' => 1
         ]);
         DB::table('navigation')->insert([
-            'title' => 'сервисы',
+            'title' => 'Услуги',
             'url' => 'services',
             'position' => 2
         ]);

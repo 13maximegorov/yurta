@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Navigation;
 
 class YurtaServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,13 @@ class YurtaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // call navigation
+        $this->topNavigation();
+    }
+
+    public function topNavigation() {
+        View::composer('layouts.header', function($v) {
+            $v->with('nav', Navigation::all());
+        });
     }
 }
