@@ -8,13 +8,8 @@
     </div>
     <div class="col-12 col-md-8 h-100 bg-white">
         <div class="auto-form-wrapper d-flex align-items-center justify-content-center flex-column">
-            <div class="nav-get-started">
-                <p>У Вас нет аккаунта?</p>
-                <a class="btn get-started-btn" href="register-2.html">Начать</a>
-            </div>
             <form action="/yurtaboard/login" method="post">
-                <h3 class="mr-auto">Добро пожаловать! Давайте начнем</h3>
-                <p class="mb-5 mr-auto">Введите свои данные ниже</p>
+                <h3 class="mr-auto mb-4">Авторизация</h3>
                 {{ csrf_field() }}
                 @if(\Illuminate\Support\Facades\Session::has('error_admin'))
                     <div class="alert alert-danger" role="alert">
@@ -42,13 +37,6 @@
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary submit-btn" type="submit">ВОЙТИ</button>
-                </div>
-                <div class="wrapper mt-5 text-gray">
-                    <p class="footer-text">Copyright © 2019</p>
-                    <!--<ul class="auth-footer text-gray">-->
-                    <!--<li><a href="#">Terms & Conditions</a></li>-->
-                    <!--<li><a href="#">Cookie Policy</a></li>-->
-                    <!--</ul>-->
                 </div>
             </form>
         </div>

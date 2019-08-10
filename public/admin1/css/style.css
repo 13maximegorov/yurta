@@ -18387,7 +18387,7 @@ pre {
 
 .navbar.horizontal-layout .nav-top {
   /* background: #090e40; */
-  background: #77b9b2;
+  background: #151727;
   height: 60px;
 }
 
@@ -28112,7 +28112,7 @@ div.tagsinput span.tag a {
 }
 
 .auth.theme-two .banner-section .slide-content.bg-1 {
-  background: url("https://via.placeholder.com/400x400") no-repeat center center;
+  background: url(../../img/welcome.jpg) center 25% no-repeat;
   background-size: cover;
 }
 

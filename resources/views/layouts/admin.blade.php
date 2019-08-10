@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="csrf-token" content="{{ csrf_token()}}">
     <title>Панель управления</title>
     <link rel="stylesheet" href="/admin1/vendors/iconfonts/simple-line-icon/css/simple-line-icons.css">
@@ -57,6 +58,9 @@
                 <ul class="nav page-navigation">
                     <li class="nav-item" id="yurtaindex">
                         <a href="/yurtaboard" class="nav-link"><i class="link-icon icon-screen-desktop"></i><span class="menu-title">Главная</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/nav" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Навигация</span><i class="menu-title"></i></a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/cards" class="nav-link"><i class="link-icon icon-book-open"></i><span class="menu-title">Галерея</span><i class="menu-title"></i></a>
