@@ -31,6 +31,7 @@ class SectionController extends Controller
                     'sections.name',
                     'sections.position',
                     'sections.id',
+                    'section_content.title',
                     'section_content.titles',
                     'section_content.slogan',
                     'section_content.caption',
@@ -91,13 +92,14 @@ class SectionController extends Controller
             'text' => 'required'
         ]);
 
-        $section_content->titles = json_encode(['h1' => $request->title, 'h2' => $request->title_h2, 'h3' => '']);
+        $section_content->title = strip_tags($request->title);
+        $section_content->titles = json_encode(['h2' => $request->title_h2, 'h3' => '']);
         $section_content->slogan = strip_tags($request->slogan);
         $section_content->caption = strip_tags($request->caption);
         $section_content->text =strip_tags($request->text);
         $section_content->save();
 
-        Session::flash('success', 'Успешно редактировано');
+        Session::flash('success', 'Успешно отредактировано.');
 
         return redirect("/yurtaboard/sections/edit/about/{$section_content->s_id}");
     }

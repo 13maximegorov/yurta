@@ -23,15 +23,15 @@ class MainController extends Controller
                     'sections.name',
                     'sections.position',
                     'sections.id',
+                    'section_content.title',
                     'section_content.titles',
                     'section_content.slogan',
                     'section_content.caption',
                     'section_content.background', 
                     'section_content.text')->get();
 
-        $keys = ['welcome', 'offer'];
-        foreach ($keys as $key => $value) {
-            $rows[$value] = $data[$key];
+        foreach ($data as $k => $v) {
+            $rows[$data[$k]->name] = $data[$k];
         }
         return view('landing', [
             'data' => $rows,

@@ -5,10 +5,7 @@
         <div class="row justify-content-center align-items-center" style="height: 100vh">
             <div class="col-md-12">
                 <div class="d-table mx-auto text-center welcome-info">
-                    <?php 
-                        $title = json_decode ($data['welcome']->titles)
-                    ?>
-                    <h1>{{ $title->h1 }}</h1>
+                    <h1>{{ $data['welcome']->title }}</h1>
                     <p>{{ $data['welcome']->slogan }}</p>
                     <a href="#offer" class="welcome__btn">Начнём</a>
                 </div>
@@ -19,7 +16,7 @@
         </span>
     </section>
     <section id="offer" class="section py-3">
-        <div class="container-fluid offer">
+        <div class="container"> 
             <h3 class="text-center">О нас</h3>
 
             <p class="slogan">YURTA MEDICAL GROUP организует медицинские туры в г. Уфа, Республика Башкортостан по направлениям Стоматология и Офтальмология. Мы заботимся о наших клиентах и готовы предложить вам комплексное сопровождение от заявки и до результата!</p>
@@ -177,8 +174,8 @@
         </div>
     </section>
     <section id="work" class="section work py-5">
-        <h3 class="text-center color__dark" style="line-height: 1.6">
-            Мы работаем с лучшими <br />медицинскими компаниями
+        <h3 class="text-center" style="line-height: 1.6">
+            <?=$data['work']->title?>
         </h3>
         <div class="container">
             <p class="slogan">Мы предлагаем своим клиентам комплексное сопровождение, начиная с первого запроса и заканчивая выпиской из клиники после завершения лечения. Обязанность наших сотрудников заключается в обеспечении качества медицинской помощи, соответствующей научному уровню и вашим социальным потребностям.</p>
@@ -240,7 +237,7 @@
     </section>
     -->
     <section id="visa" class="section visa pt-3">
-        <h3 class="text-center">Visa</h3>
+        <h3 class="text-center">{{ $data['visa']->title }}</h3>
         <div class="container">
             <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                 <div class="col-lg-6 text-center align-self-center">
@@ -300,26 +297,17 @@
         <div class="ornament-1 mt-5"></div>
     </section>
     <section id="license" class="section license pt-3">
-        <h3 class="text-center">Лицензия</h3>
+        <h3 class="text-center">{{ $data['license']->title }}</h3>
         <div class="container">
             <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                <div class="col-lg-6 text-center align-self-center">
-                    
+                <div class="col-lg-4 text-center align-self-center">
+                    <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
                 </div>
-                <div class="col-lg-6 ">
-                    <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
-                        <h4 class="text-black">
-                            Обыкновенная туристическая
-                        </h4>
-                        <p class="mb-0 text-black-50">
-                            оформляется на основании туристического приглашения, иностранцам, желающим посетить Россию в туристических целях (посещение выставок, культурных мероприятий, экскурсий, знакомство с достопримечательностями нашей страны и просто прогулки по нашим замечательным улицам).
-                        Виза может быть однократная или двукратная. Максимальный срок пребывания по туристической визе 1 мес. Срок оформления такого приглашения 1 день или срочное оформление — за 1 час.(Цель поездки указываемая в приглашении: ТУРИЗМ, АВТОТУРИЗМ, ТУРИЗМ ЦЕЛЕВОЙ, ТУРИЗМ-ОХОТА)Самый быстрый способ оформить краткосрочный визит в Россию, с туристической целью поездки. Для получения визы, в посольство достаточно предоставить копию приглашения (распечатанную копию или факсимильную)    
-                        </p>
-                        </div>
-                    </div>
-                    </div>
+                <div class="col-lg-4">
+                    <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
                 </div>
             </div>
 

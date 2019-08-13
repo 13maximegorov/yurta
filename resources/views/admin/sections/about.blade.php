@@ -32,7 +32,7 @@
                                 @endif
                                 <div class="form-group">
                                     <label for="title1">Заголовок</label>
-                                    <input type="text" id="title1" class="form-control" name="title" placeholder="Название" value="{{json_decode($section_content->titles)->h1}}">
+                                    <input type="text" id="title1" class="form-control" name="title" placeholder="Название" value="{{$section_content->title}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="title2">Подзаголовок</label>
