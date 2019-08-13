@@ -1,4 +1,6 @@
 @import url(../fonts/HyundaiSans/stylesheet.css)
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap&subset=cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic')
 
 * 
     font-size: 14px
@@ -10,6 +12,10 @@ $light: #EBECEC
 $d1: #758c9f
 $d2: #a8b7c2	
 $d3: #2c496b
+
+p,
+ul li
+    font-family: 'Didact Gothic', 'Open Sans', sans-serif
 
 button:focus,
 input:focus
@@ -77,7 +83,7 @@ input
     width: 100%
     height: 100%
     z-index: 0
-    background: rgba(0, 0, 0, .3)
+    background: rgba(0, 0, 0, .5)
 
 .navbar-brand
     text-transform: uppercase
@@ -105,7 +111,7 @@ input
     margin-bottom: 50px
     color: rgba(255, 255, 255, .8)
 
-.welcome-info button 
+.welcome-info .welcome__btn 
     border: 1px solid rgba(255, 255, 255, .5)
     background: none
     border-radius: 32px
@@ -114,8 +120,9 @@ input
     text-transform: capitalize
     font-size: 16px
     transition: .3s
+    text-decoration: none
 
-.welcome-info button:hover 
+.welcome-info .welcome__btn:hover 
     color: $green
     border-color: $green
 
@@ -131,9 +138,16 @@ input
     border-bottom: 1px solid rgba(255, 255, 255, .5)
     padding-bottom: 5px
 
-#offer
+.offer
     padding-left: 100px
     padding-right: 100px
+
+.slogan
+    font-size: 20px
+    max-width: 725px
+    margin: auto
+    text-align: center
+    color: #444
 
 #offer 
     ul 
@@ -144,7 +158,6 @@ input
             line-height: 2
             font-size: 16px
             font-weight: 400
-            text-transform: uppercase
             color: #444
             margin-bottom: 15px
     span
@@ -164,7 +177,7 @@ input
     background: $green
     box-shadow: 0 6px 15px rgba(36,37,38,0.1)
     border-radius: 16px
-    padding: 5px 25px 25px 25px
+    padding: 5px 20px 20px 20px
     &:after
         bottom: 100%
         left: 50%
@@ -184,18 +197,6 @@ input
     text-transform: uppercase
     margin: 40px 0
 
-.section h4
-    font-size: 32px
-    color: $d1
-
-#offer p 
-    max-width: 725px
-    margin: auto
-    text-align: center
-    color: #222
-    font-weight: 300
-    font-size: 18px
-
 #offer p,
 #visa p
     margin-top: 25px
@@ -203,7 +204,37 @@ input
 
 #visa span
     font-weight: 700
-    font-size: 22px   
+    font-size: 22px  
+    color: $green
+
+#visa h4
+    font-size: 26px
+    font-weight: 400
+
+#visa p
+    font-size: 14px
+
+.visa-info 
+    span
+        font-size: 62px !important
+
+// Service
+@media (min-width: 992px)
+    .service .featured-text 
+        padding: 0 0 0 2rem
+        border-left: .5rem solid #64a19d
+
+    .service .project-text 
+        padding: 5rem
+    
+
+.service .project-text 
+    padding: 3rem
+    font-size: 90%
+
+.service .equal
+    margin-bottom: 0
+    height: 300px
 
 .visa-info
     padding: 0 50px
@@ -212,7 +243,7 @@ input
     overflow: hidden
     position: relative
     width: 100%
-    height: 225px
+    height: 250px
     background: #ccc
     margin-bottom: 30px
 
@@ -223,7 +254,8 @@ input
     left: 0
     width: 100%
     height: 100%
-    background: rgba(0, 0, 0, .3)
+    // background: rgba(86, 105, 195, 0.3)
+    background: linear-gradient(45deg, rgba(0,0,0, .8), transparent)
 
 .equal img
     width: 100%
@@ -236,6 +268,7 @@ input
     left: 15px
     color: #fff
     font-size: 16px
+    font-weight: 400
 
 .nav-buttons button
     width: 50px
@@ -312,6 +345,6 @@ input
 
 // media
 @media screen and (max-width: 768px) 
-    #offer
+    .offer
         padding-right: 50px
         padding-left: 50px 

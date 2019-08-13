@@ -26,8 +26,7 @@ class MainController extends Controller
                     'section_content.titles',
                     'section_content.slogan',
                     'section_content.caption',
-                    'section_content.background',
-                    'section_content.slides',
+                    'section_content.background', 
                     'section_content.text')->get();
 
         $keys = ['welcome', 'offer'];

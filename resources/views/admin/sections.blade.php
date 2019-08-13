@@ -21,12 +21,15 @@
                                         <?php if ($sections): ?>
                                         <?php $i = 1; ?>
                                         <?php foreach($sections as $section): ?>
+                                        <?php $title = json_decode($section->titles) ?>
                                             <tr>
                                                 <td><?=$i++?></td>
-                                                <td class="w-100">{{ $section->name }}</td>
+                                                <td class="w-100">
+                                                    {{ $title->h1 }}
+                                                </td>
                                                 <td>
                                                     <a href="#" class="btn btn-outline-primary mr-2">Посмотреть</a>
-                                                <a href="/yurtaboard/sections/edit/{{ $section->type }}/{{ $section->id }}" class="btn btn-outline-success">Редактировать</a>
+                                                <a href="/yurtaboard/sections/edit//" class="btn btn-primary">Редактировать</a>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>

@@ -12,7 +12,9 @@
                   <div class="d-flex justify-content-between border-right card-statistics-item">
                     <div>
                       <h1>{{ $counter['gallery'] }}</h1>
-                      <p class="text-muted mb-0">Изображений в галереи</p>
+                      <p class="text-muted mb-0">
+                        Информационные карточки
+                      </p>
                     </div>
                     <i class="icon-layers text-primary icon-lg"></i>
                   </div>

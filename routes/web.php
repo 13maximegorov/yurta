@@ -35,6 +35,9 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::post('/sections/edit/about/{id}', 'SectionController@editAbout');
     Route::get('/sections/edit/slider/{id}', 'SectionController@slider');
 
+    Route::get('/nav', 'NavigationController@index');
+    Route::post('/nav/save', 'NavigationController@save');
+
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
     // list all lfm routes here...

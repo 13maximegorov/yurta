@@ -5,18 +5,41 @@ namespace App\Http\Controllers\Admin;
 use App\Cards;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Navigation;
 use App\Section;
 use App\SectionContent;
 use Illuminate\Support\Facades\Session;
+use DB;
 
 class SectionController extends Controller
 {
 
     // получение секции
     public function sections() {
-        $sections = Section::all();
+        $sections = Navigation::all();
+        $t1 = 'sections';
+        $t2 = 'section_content';
+        $data = DB::table($t1)
+                ->join(
+                    $t2, 
+                    'section_content.s_id', 
+                    '=', 
+                    'sections.id'
+                )
+                ->select(
+                    'sections.id',
+                    'sections.name',
+                    'sections.position',
+                    'sections.id',
+                    'section_content.titles',
+                    'section_content.slogan',
+                    'section_content.caption',
+                    'section_content.background',
+                    'section_content.text')->get();
+
+
         return view('admin.sections', [
-            'sections' => $sections
+            'sections' => $data
         ]);
     }
 

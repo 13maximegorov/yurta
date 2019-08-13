@@ -21,7 +21,7 @@ class CreateSectionContentTable extends Migration
             $table->string('caption')->nullable();
             $table->string('background', 255)->nullable();
             $table->json('slides')->nullable();
-            $table->string('text')->nullable();
+            $table->text('text')->nullable();
             $table->timestamps();
         });
     }
