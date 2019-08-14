@@ -55,6 +55,10 @@
                                                         value="{{ $n->title }}"
                                                     >
                                                     </td>
+                                                    <td>
+                                                        <label>Не показывать</label>
+                                                        <input type="checkbox" class="form-check-input" name="active" value="{{ $n->id }}">
+                                                    </td>
                                                 </tr>
                                             @endforeach
                                         @endif

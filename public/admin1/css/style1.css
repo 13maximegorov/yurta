@@ -1,9 +1,15 @@
+.form-control {
+    font-size: 16px !important;
+    border-color: #ccc;
+}
+
 .card_view img {
     object-fit: cover;
 }
 
 .card_view {
     position: relative;
+    height: 250px;
 }
 
 .card_view .mask {
