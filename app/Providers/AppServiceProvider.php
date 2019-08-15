@@ -45,9 +45,24 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function siteVisitor() {
-        $visitor = new Visitor;
-        $visitor->ip = request()->ip();
-        $visitor->hits = 1;
-        $visitor->save();
+        $ip_address = request()->ip();
+        $location = \Location::get($ip_address);
+        $user = Visitor::where('ip', $ip_address)->first();
+        $map = 'Not found';
+
+        if (!empty($location->regionName) && !empty($location->cityName)) {
+            $map = $location->cityName . ', ' . $location->regionName;
+        } 
+
+        if (!$user) {
+            $visitor = new Visitor;
+            $visitor->ip = $ip_address;
+            $visitor->location = $map;
+            $visitor->hits = 1;
+            $visitor->save(); 
+        } else {
+            Visitor::where('ip', $ip_address)->update(['hits' => $user->hits + 1]);
+        }
+        
     }
 }
