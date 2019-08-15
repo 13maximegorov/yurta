@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/zoom.css">
     <link rel="stylesheet" href="css/yurta.css">
     <title>{{ $settings['site.title'] }}</title>
 </head>
@@ -90,6 +91,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/zoom.js"></script>
 <script src="js/yurta.js"></script>
 
 </body>

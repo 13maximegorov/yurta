@@ -504,13 +504,13 @@
     <div class="container">
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
             <div class="col-lg-4 text-center align-self-center">
-                <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
+                <img src="img/license.jpg" data-action="zoom" class="img-fluid" alt="Лицензия">
             </div>
             <div class="col-lg-4">
-                <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
+                <img src="img/license.jpg" data-action="zoom" class="img-fluid" alt="Лицензия">
             </div>
             <div class="col-lg-4">
-                <img src="img/license.jpg" class="img-fluid" alt="Лицензия">
+                <img src="img/license.jpg" data-action="zoom" class="img-fluid" alt="Лицензия">
             </div>
         </div>
 
