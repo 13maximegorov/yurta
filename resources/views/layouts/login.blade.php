@@ -13,6 +13,19 @@
     <link rel="shortcut icon" href="../yurta-favicon.png" />
 </head>
 <body>
+<style>
+    .form-control {
+        font-size: 18px;
+    }
+    .input-group-text {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    .input-group-text,
+    .form-control {
+        border-color: #ccc !important; 
+    }
+</style>
 <div class="container-scroller">
     <div class="container-fluid page-body-wrapper full-page-wrapper">
         <div class="content-wrapper auth p-0 theme-two">

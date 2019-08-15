@@ -22,21 +22,49 @@
 <div class="app">
     @include('layouts.header')
     @yield('content', View::make('landing'))
-    <footer class="footer section">
-        <h4 class="text-center footer__title">Связаться с нами</h4>
-        <div class="d-table mx-auto text-center">
-            <form class="d-block my-3">
-                <div class="row no-gutters">
-                    <div class="col-12">
-                        <button class="green__button">Subscribe now</button>
+    <footer class="footer section pt-5" id="contacts">
+        <h3 class="text-center">Как с нами связаться?</h3>
+        <section class="contact-section bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt color__green text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Адрес</h4>
+                                <hr class="my-4">
+                                <div class="small text-black-50">
+                                    Уфа, ул. Ленина, 11
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope color__green text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4">
+                            <div class="small text-black-50">
+                            <a href="mailto:" class="text-dark">hello@yurta.ru</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt color__green text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Телефон</h4>
+                            <hr class="my-4">
+                            <div class="small text-black-50">+1 (555) 902-8832</div>
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </form>
-            <p>Subscribe nowf you want to recieve updates and new via email.</p>
-            <p>Don't worry, it won't happen often.</p>
-        </div>
-        <!-- Line -->
-        <nav class="footer__nav-social d-table mx-auto">
+            </div>
+        </section>
+        <nav class="footer__nav-social d-table mx-auto mt-5">
             <a href="#">
                 <i class="fab fa-facebook-f"></i>
             </a>

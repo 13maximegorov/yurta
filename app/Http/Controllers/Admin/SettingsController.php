@@ -39,7 +39,7 @@ class SettingsController extends Controller
             ++$i;
         }
 
-        Session::flash('success', 'Успешно редактировано');
+        Session::flash('success', 'Успешно отредактировано.');
 
         return redirect("/yurtaboard/settings");
 
