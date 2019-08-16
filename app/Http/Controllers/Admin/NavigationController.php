@@ -21,10 +21,21 @@ class NavigationController extends Controller
 
     public function save() {
         if ($_POST) {
+            
             unset ($_POST['_token']);
 
-            foreach ($_POST as $k => $v) {
-                $updated = Navigation::where('id', '=', $k)->update(['title' => $v]);
+            foreach ($_POST['nav'] as $k => $v) {
+                if ( isset ($_POST['nav'][$k]['visible']) ) {
+                    Navigation::where('id', '=', $k)->update([
+                        'title' => $v['name'],
+                        'is_active' => '1'
+                    ]);
+                } else {
+                    Navigation::where('id', '=', $k)->update([
+                        'title' => $v['name'],
+                        'is_active' => '0'
+                    ]);
+                }
             }
 
             Session::flash('success', 'Успешно  отредактировано.');

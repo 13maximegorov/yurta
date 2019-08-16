@@ -50,14 +50,24 @@
                                                     <td>
                                                     <input type="text" 
                                                         required class="form-control" 
-                                                        name="{{ $n->id }}"  
+                                                        name="nav[{{ $n->id }}][name]"  
                                                         placeholder="" 
                                                         value="{{ $n->title }}"
                                                     >
                                                     </td>
                                                     <td>
-                                                        <label>Не показывать</label>
-                                                        <input type="checkbox" class="form-check-input" name="active" value="{{ $n->id }}">
+                                                        <div class="form-check">
+                                                            <label class="form-check-label">
+                                                                <input 
+                                                                type="checkbox" 
+                                                                <?=$n->is_active == '1' ? 'checked' : '' ?>
+                                                                class="form-check-input" 
+                                                                name="nav[{{ $n->id }}][visible]" 
+                                                                id="membershipRadios2" 
+                                                                value="{{ $n->id }}">
+                                                                НЕ ПОКАЗЫВАТЬ
+                                                            <i class="input-helper"></i></label>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach

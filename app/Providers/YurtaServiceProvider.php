@@ -31,7 +31,7 @@ class YurtaServiceProvider extends ServiceProvider
 
     public function topNavigation() {
         View::composer('layouts.header', function($v) {
-            $v->with('nav', Navigation::all());
+            $v->with('nav', Navigation::where('is_active', '0')->get());
         });
     }
 }
