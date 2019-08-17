@@ -42,4 +42,9 @@ class MainController extends Controller
     public function getGallery() {
         return Cards::orderBy('id', 'DESC')->get();
     }
+
+    public function cardInfo(Request $r) {
+        $id = (int) $r->id;
+        return response()->json(Cards::where('id', $id)->first(), 200);
+    }
 }

@@ -13,6 +13,7 @@
 
 // Yurta
 Route::get('/', 'MainController@index');
+Route::get('/card/info', 'MainController@cardInfo');
 Route::get('/page/{alias}', 'PageController@index');
 
 // Панель управления Yurtaboard

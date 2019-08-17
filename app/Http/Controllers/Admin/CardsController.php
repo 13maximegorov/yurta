@@ -34,10 +34,11 @@ class CardsController extends Controller
 
         $pathImg = public_path() . '/img/gallery';
         $image = $request->file('img');
-        $image->move($pathImg, $image->getClientOriginalName());
+        $e = 'image' . md5($image->getClientOriginalName()) .'.'. $image->guessExtension();
+        $image->move($pathImg, $e);
 
         $cards->title = strip_tags($request->title);
-        $cards->text = strip_tags($request->text);
+        $cards->text = $request->text;
         $cards->url = '';
         $cards->img = $image->getClientOriginalName();
         if ($request->is_active == "on") {
@@ -66,11 +67,12 @@ class CardsController extends Controller
         $image = $request->file('img');
         if ($image) {
             $pathImg = public_path() . '/img/gallery';
-            $image->move($pathImg, $image->getClientOriginalName());
-            $card->img = $image->getClientOriginalName();
+            $e = 'image' . md5($image->getClientOriginalName()) .'.'. $image->guessExtension();
+            $image->move($pathImg, $e);
+            $card->img = $e;
         }
         $card->title = strip_tags($request->title);
-        $card->text = strip_tags($request->text);
+        $card->text = $request->text;
         $card->url = '';
         if ($request->is_active == "on") {
             $card->is_active = '1';

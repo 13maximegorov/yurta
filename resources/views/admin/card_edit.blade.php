@@ -36,13 +36,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="descr">Описание</label>
-                                    <textarea type="text" class="form-control" id="descr"  name="text" placeholder="Описание">{{$card->text}}</textarea>
+                                    <textarea type="text" class="form-control my-editor" id="descr"  name="text" placeholder="Описание">{{$card->text}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <div class="card">
                                         <div class="card-body">
                                             <label for="#">Текущее изображение</label>
-                                            <img class="d-block w-100" src="/img/gallery/{{$card->img}}" alt="#">
+                                            <img class="d-block" width="320" src="/img/gallery/{{$card->img}}" alt="#">
                                         </div>
                                     </div>
                                 </div>
@@ -68,4 +68,7 @@
                 </div>
             </div>
         </div>
+<script>
+    CKEDITOR.replace('text');
+</script>
 @endsection

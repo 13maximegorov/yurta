@@ -1,5 +1,6 @@
 @extends('layouts.yurta') 
 @section('content')
+@component('components.over') @endcomponent
 <section id="welcome" class="section">
     <div class="row justify-content-center align-items-center" style="height: 100vh">
         <div class="col-md-12">
@@ -25,7 +26,7 @@
                 <div class="row mt-5">
                     @if ($gallery) @foreach ($gallery as $item)
                     <div class="col-md-6 col-lg-4">
-                        <div class="equal">
+                        <div class="equal e-offer" data-title="{{$item->title}}" data-id="{{$item->id}}" data-img="{{$item->img}}">
                             <h6>{{ $item->title }}</h6>
                             <img src="/img/gallery/{{ $item->img }}" alt="{{ $item->title }}">
                         </div>

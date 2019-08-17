@@ -1,5 +1,6 @@
 let header = document.querySelector('.header');
 let navbar = document.querySelector('.navbar-brand img');
+var over = document.querySelector('.over');
 
 if (parseInt(window.pageYOffset) > 50) {
     header.classList.add('header__active');
@@ -49,5 +50,25 @@ $(document).ready(function() {
 
         //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({ scrollTop: top }, 1500);
+    });
+});
+
+// Over
+$(document).on('click', 'span.over__close', function() {
+    $('body').removeClass('over__hidden');
+    $('.over__title').text('');
+    $('.over__content').html('');
+    $('.over').addClass('over__hide').removeClass('over__active');
+});
+
+// Over offer card
+$(document).on('click', 'div.e-offer', function() {
+    $('body').addClass('over__hidden');
+    $('.over').addClass('over__active');
+    var id = parseInt(this.getAttribute('data-id'));
+    $('.over__title').text(this.getAttribute('data-title'));
+    $('.over__image img').attr('src', '/img/gallery/' + this.getAttribute('data-img'));
+    $.get('/card/info', { id: id }, function(res) {
+        $('.over__content').html(res.text);
     });
 });

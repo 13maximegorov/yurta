@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/admin1/css/style.css">
     <link rel="stylesheet" href="/admin1/css/style1.css">
     <link rel="shortcut icon" href="../yurta-favicon.png" type="image/x-icon">
+    {{-- <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script> --}}
+    <script src="//cdn.ckeditor.com/4.12.1/basic/ckeditor.js"></script>
 </head>
 
 <body>
@@ -117,8 +119,6 @@
 {{--<script src="/admin1/js/select2.js"></script>--}}
 {{--<script src="/admin1/js/typeahead.js"></script>--}}
 
-<!-- End custom js for this page-->
-<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 <script>
   var options = {
     filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -129,9 +129,6 @@
 	allowContent: 'a[!href]; ul; div; li{text-align}(someclass); link'
   };
 </script>
-<script>
-    //CKEDITOR.replace('my-editor', options);
-</script>
-</body>
 
+</body>
 </html>
