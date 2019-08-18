@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="/admin1/css/style.css">
     <link rel="stylesheet" href="/admin1/css/style1.css">
     <link rel="shortcut icon" href="../yurta-favicon.png" type="image/x-icon">
-    {{-- <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script> --}}
-    <script src="//cdn.ckeditor.com/4.12.1/basic/ckeditor.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    {{-- <script src="//cdn.ckeditor.com/4.12.1/basic/ckeditor.js"></script> --}}
 </head>
 
 <body>
@@ -70,7 +70,12 @@
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/cards" class="nav-link">
-                            <span class="menu-title">Галерея</span>
+                            <span class="menu-title">Карточки</span>
+                            <i class="menu-title"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/service" class="nav-link">
+                            <span class="menu-title">Услуги</span>
                             <i class="menu-title"></i></a>
                     </li>
                     <li class="nav-item">

@@ -6,6 +6,7 @@ use App\Cards;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
+use Image;
 
 class CardsController extends Controller
 {
@@ -26,6 +27,8 @@ class CardsController extends Controller
     public function addCard(Request $request) {
         $cards = new Cards();
 
+        ini_set('memory_limit', '256M');
+
         $this->validate($request, [
             'title' => 'required|max:255',
             'text' => 'required',
@@ -37,10 +40,21 @@ class CardsController extends Controller
         $e = 'image' . md5($image->getClientOriginalName()) .'.'. $image->guessExtension();
         $image->move($pathImg, $e);
 
+        //Resize image here
+        $thumbnailpath = public_path('img/gallery/'. $e);
+        $img = Image::make($thumbnailpath);
+        if ($img->width() >= 500) {
+           $img->resize(500, null, function ($constraint) {
+                $constraint->aspectRatio();
+            }); 
+        }
+        
+        $img->save('img/gallery/thumb/' . $e, 100);
+
         $cards->title = strip_tags($request->title);
         $cards->text = $request->text;
         $cards->url = '';
-        $cards->img = $image->getClientOriginalName();
+        $cards->img = $e;
         if ($request->is_active == "on") {
             $cards->is_active = '1';
         }
@@ -66,9 +80,23 @@ class CardsController extends Controller
 
         $image = $request->file('img');
         if ($image) {
+            ini_set('memory_limit', '256M');
+
             $pathImg = public_path() . '/img/gallery';
             $e = 'image' . md5($image->getClientOriginalName()) .'.'. $image->guessExtension();
             $image->move($pathImg, $e);
+
+            //Resize image here
+            $thumbnailpath = public_path('img/gallery/'. $e);
+            $img = Image::make($thumbnailpath);
+            if ($img->width() >= 500) {
+               $img->resize(500, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                }); 
+            }
+            
+            $img->save('img/gallery/thumb/' . $e, 100);
+
             $card->img = $e;
         }
         $card->title = strip_tags($request->title);
@@ -79,7 +107,7 @@ class CardsController extends Controller
         }
         $card->save();
 
-        Session::flash('success', 'Успешно редактировано');
+        Session::flash('success', 'Успешно отредактировано.');
 
         return redirect("/yurtaboard/cards/edit/{$card->id}");
     }

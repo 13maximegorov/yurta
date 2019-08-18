@@ -180,6 +180,9 @@ return [
 
         // Top Navigation 
         App\Providers\YurtaServiceProvider::class,
+        
+        // Image
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -233,6 +236,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Location' => Stevebauman\Location\Facades\Location::class,
+
+        'Image' => Intervention\Image\Facades\Image::class
+
 
     ],
 

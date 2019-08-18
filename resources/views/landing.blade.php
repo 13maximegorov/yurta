@@ -28,48 +28,24 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="equal e-offer" data-title="{{$item->title}}" data-id="{{$item->id}}" data-img="{{$item->img}}">
                             <h6>{{ $item->title }}</h6>
-                            <img src="/img/gallery/{{ $item->img }}" alt="{{ $item->title }}">
+                            <img src="/img/gallery/thumb/{{ $item->img }}" alt="{{ $item->title }}">
                         </div>
                     </div>
-                    @endforeach @endif {{--
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="https://www.goodnewsclinics.org/wp-content/uploads/2018/05/Hygienist.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="http://www.fareastdental.com/sites/default/files/photos/large/201512/img2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="https://img.freepik.com/free-photo/close-up-implan-tooth-support-fix-bridge-implan-crown_60829-516.jpg?size=626&ext=jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/797/79726354.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="https://www.libertytravel.com/sites/default/files/styles/full_size/public/flight-hero.jpg?itok=hhscHSGZ" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="equal">
-                            <h6>Title not found</h6>
-                            <img src="https://img1.southernliving.timeinc.net/sites/default/files/styles/story_card_hero/public/image/2016/01/main/ga_7388cf91891f4602_spcms.jpg?itok=smgvjcaa" alt="">
-                        </div>
-                    </div> --}}
+                    @endforeach @endif 
                 </div>
             </div>
+            <div>
+                    <div class="row mt-5">
+                        @if ($gallery) @foreach ($gallery as $item)
+                        <div class="col-md-6 col-lg-4">
+                            <div class="equal e-offer" data-title="{{$item->title}}" data-id="{{$item->id}}" data-img="{{$item->img}}">
+                                <h6>{{ $item->title }}</h6>
+                                <img src="/img/gallery/thumb/{{ $item->img }}" alt="{{ $item->title }}">
+                            </div>
+                        </div>
+                        @endforeach @endif 
+                    </div>
+                </div>
         </div>
 
     </div>
@@ -118,76 +94,36 @@
         </div>
     </div>
 </section>
+@if ($service)
 <section id="service" class="section service pt-3">
     <h3 class="text-center">Услуги</h3>
     <div class="container">
-
-        <!-- Featured Project Row -->
-        {{--
-        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            <div class="col-xl-8 col-lg-7">
-                <img class="img-fluid mb-3 mb-lg-0" src="https://blackrockdigital.github.io/startbootstrap-grayscale/img/bg-masthead.jpg" alt="">
-            </div>
-            <div class="col-xl-4 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
-                    <h4>Shoreline</h4>
-                    <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                </div>
-            </div>
-        </div> --}}
-
-        <!-- Project One Row -->
+        <?php $i = 1; ?>
+        @foreach ($service as $s)
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
             <div class="col-lg-6">
                 <div class="equal">
-                    <img class="img-fluid" src="/img/gallery/стоматология.jpg" alt="">
+                    <img class="img-fluid" src="/img/service/thumb/{{ $s->img }}" alt="{{ $s->title }}">
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="bg-dark text-center h-100 project">
+            <div class="col-lg-6 <?=$i % 2 === 0 ? 'order-lg-first' : ''?>">
+                <div class="bg-light text-center h-100 project">
                     <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Стоматология</h4>
-                            <p class="mb-0 text-white-50">
-                                <ol class="text-white-50">
-                                    <li>Лечение</li>
-                                    <li>Протезирование</li>
-                                    <li>Имплантация</li>
-                                    <li>Хирургия</li>
-                                    <li>Ортодонтия </li>
-                                    <li>Эстетическая стоматология (Виниры и Люминиры)</li>
-                                </ol>  
-                            </p>
-                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        <div class="project-text w-100 my-auto text-center 
+                        <?=$i % 2 === 0 ? 'text-lg-right' : 'text-lg-left'?>">
+                            <h4 class="text-black">{{ $s->title }}</h4>
+                            <?=$s->text?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Project Two Row -->
-        <div class="row justify-content-center no-gutters">
-            <div class="col-lg-6">
-                <div class="equal">
-                    <img class="img-fluid" src="/img/gallery/офтальмология.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="bg-dark text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Офтальмология</h4>
-                            <p class="mb-0 text-white-50">
-                                Офтальмологи в Уфе известны во всем мире и считаются одними из лучших в России. Ежегодно выполняется более 50 тысяч операций.Здесь более 200 офтальмологов и более 40 офтальмохирургов, самое современное оборудование и грамотные специалисты. Они оказывают весь спектр офтальмологической помощи доступный в мире на данный момент.
-                                <hr class="d-none d-lg-block mb-0 mr-0">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php ++$i; ?>
+        @endforeach
 
     </div>
 </section>
+@endif
 <section id="work" class="section work py-5">
     <h3 class="text-center" style="line-height: 1.6">
             <?=$data['work']->title?>
