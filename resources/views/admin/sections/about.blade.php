@@ -58,4 +58,7 @@
                 </div>
             </div>
         </div>
+        <script>
+            CKEDITOR.replace('text')
+        </script>
 @endsection

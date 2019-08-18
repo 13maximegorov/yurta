@@ -28,7 +28,11 @@ Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' =>
     Route::get('cards/delete/{id}', 'CardsController@deleteCard');
     Route::get('/settings', 'SettingsController@settings');
     Route::post('/settings/edit', 'SettingsController@editSettings');
-    Route::get('/sections', 'SectionController@sections');
+    Route::get('/sections', 'SectionController@sections'); 
+
+    Route::get('/service', 'ServiceController@index');
+    Route::get('/service/edit/{id}', 'ServiceController@service');
+    Route::post('/service/edit/{id}', 'ServiceController@serviceEdit');
 
     Route::get('/sections/edit/welcome/{id}', 'SectionController@welcome');
     Route::post('/sections/edit/welcome/{id}', 'SectionController@editWelcome');
