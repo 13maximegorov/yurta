@@ -23,10 +23,10 @@
         <div class="nav-top flex-grow-1">
             <div class="container d-flex flex-row h-100 align-items-center">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center">
-                    <a class="navbar-brand brand-logo text-white" href="/yurtaboard">
+                    <a class="navbar-brand brand-logo text-dark" href="/yurtaboard">
                         Панель управления
                     </a>
-                    <a class="navbar-brand brand-logo-mini text-white" href="/yurtaboard">
+                    <a class="navbar-brand brand-logo-mini text-dark" href="/yurtaboard">
                         Панель управления
                     </a>
                 </div>
@@ -34,7 +34,6 @@
                     <ul class="navbar-nav navbar-nav-right mr-0 ml-auto">
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-{{--                                <img src="https://via.placeholder.com/39x39" alt="profile"/>--}}
                                 <i class="icon-people"></i>
                                 @if (\Illuminate\Support\Facades\Auth::check())
                                 <span class="nav-profile-name">{{\Illuminate\Support\Facades\Auth::user()->login}}</span>
@@ -103,14 +102,8 @@
     </div>
 
 </div>
-<!-- container-scroller -->
-
-<!-- plugins:js -->
 <script src="/admin1/vendors/js/vendor.bundle.base.js"></script>
 <script src="/admin1/vendors/js/vendor.bundle.addons.js"></script>
-<!-- Plugin js for this page-->
-<!-- End plugin js for this page-->
-<!-- inject:js -->
 <script src="/admin1/js/dashboard.js"></script>
 <script src="/admin1/js/template.js"></script>
 <script src="/admin1/js/todolist.js"></script>

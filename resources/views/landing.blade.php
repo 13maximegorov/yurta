@@ -119,7 +119,7 @@
     <div class="container">
         <p class="slogan color__grey">Мы предлагаем своим клиентам комплексное сопровождение, начиная с первого запроса и заканчивая выпиской из клиники после завершения лечения. Обязанность наших сотрудников заключается в обеспечении качества медицинской помощи, соответствующей научному уровню и вашим социальным потребностям.</p>
 
-        <h4 class="text-center mt-5">Как мы работаем?</h4>
+        <h4 class="text-center how-work">Как мы работаем?</h4>
 
         <div class="row justify-content-center no-gutters mb-lg-0">
             <div class="col-lg-6 text-center align-self-center">
