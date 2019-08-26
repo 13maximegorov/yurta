@@ -13,6 +13,7 @@ class CardsController extends Controller
     public function cards() {
         $cards = Cards::orderBy('id', 'desc')->get();
         return view('admin.cards', ['cards' => $cards]);
+        
     }
 
     public function cardsAdd() {

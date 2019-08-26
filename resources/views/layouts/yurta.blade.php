@@ -23,7 +23,7 @@
 <div class="app">
     @include('layouts.header')
     @yield('content', View::make('landing'))
-    <footer class="footer section pt-5" id="contacts">
+    <footer class="footer section pt-5 pb-3" id="contacts">
         <h3 class="text-center">Как с нами связаться?</h3>
         <section class="contact-section bg-black">
             <div class="container">
@@ -76,12 +76,8 @@
                 <i class="fab fa-vk"></i>
             </a>
         </nav>
-        <div class="footer__bg">
-            <div class="footer__section">
-                <div class="container">
-                    <span class="text-white">&copy; 2019 {{ $settings['site.footer'] }} </span>
-                </div>
-            </div>
+        <div class="container">
+            <p class="text-dark text-center mt-4">{{ $settings['site.footer'] }} &copy; 2019</p>
         </div>
     </footer>
 </div>
