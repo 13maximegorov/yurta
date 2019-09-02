@@ -34,7 +34,7 @@
                                     <label for="title1">Заголовок</label>
                                     <input type="text" id="title1" class="form-control" name="title" placeholder="Название" value="{{$section_content->title}}">
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="title2">Подзаголовок</label>
                                     <input type="text" id="title2" class="form-control" name="title_h2" placeholder="Подзаголовок" value="{{json_decode($section_content->titles)->h2}}">
                                 </div>
@@ -45,10 +45,10 @@
                                 <div class="form-group">
                                     <label for="caption">Подпись</label>
                                     <input type="text" class="form-control" id="caption" name="caption" placeholder="Подпись" value="{{$section_content->caption}}">
-                                </div>
+                                </div> --}}
                                 <div class="form-group">
                                     <label for="text">Описание</label>
-                                    <textarea type="text" class="form-control" id="text"  name="text" maxlength="300" placeholder="Ваш текст">{{$section_content->text}}</textarea>
+                                    <textarea style="min-height: 400px" type="text" class="form-control" id="text"  name="text" placeholder="Ваш текст">{{$section_content->text}}</textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary mr-2">Редактировать</button>
                                 <a href="/yurtaboard/sections/" class="btn btn-light">Отменить</a>

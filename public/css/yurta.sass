@@ -11,6 +11,9 @@ $d1: #758c9f
 $d2: #a8b7c2	
 $d3: #2c496b
 
+ul, ol
+    padding-left: 0
+
 b,
 strong
     font-weight: 600
@@ -27,6 +30,21 @@ input
     border-radius: 3px
     padding: 8px 24px 9px 15px
     font-size: 14px
+
+.y-btn,
+.y-outline-btn
+    padding: 12px 30px
+    font-size: 18px
+    font-weight: 600
+
+.y-btn
+    background: #8FD2CB
+    color: #000
+
+.y-outline-btn
+    background: none
+    color: $d3
+    border: 1px solid $d3
 
 .border-left,
 .border-right
@@ -263,8 +281,12 @@ input
     font-weight: 300
     margin-bottom: 25px
 
+#relax p 
+    margin-bottom: 10px
+#relax b
+    font-size: 16px
+
 .row-service 
-    max-width: 720px
     margin: 35px auto 50px auto
 
 .row-service .col-md-6 img
@@ -273,16 +295,49 @@ input
     margin: auto
 
 .row-service .col-md-6 .card
-    height: 440px
+    border: 0px solid rgba(143, 210, 203, .3) !important
+    // background: rgba(143, 210, 203, .1)
+    // padding: 15px
+    height: auto
+
+.row-service .col-md-6 .card .card-title
+    font-size: 26px
 
 .row-service .col-md-6 .card .card-body p
     text-align: left !important
+    margin: 0
     margin-bottom: 15px !important
 
 .row-service .col-md-6 .card .card-body ol li
+    list-style: none
     font-size: 16px !important
-    line-height: 2.1
-    color: #555
+    background: rgba(143, 210, 203, .15)
+    margin-bottom: 7px
+    padding: 10px 15px
+    border-radius: 4px
+    color: #000
+
+.row-relax
+    margin: 30px 0
+
+.row-relax .col-md-4 .card
+    border: none
+    background: none
+
+.row-relax .col-md-4 .card .card-img
+    width: 100%
+    height: 230px
+
+.row-relax .col-md-4 .card .card-img img 
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 4px
+
+.row-relax .col-md-4 .card .card-title
+    font-size: 16px
+    margin-top: 10px
+    font-weight: 600
 
 .equal 
     overflow: hidden
@@ -291,6 +346,7 @@ input
     height: 250px
     background: #ccc
     margin-bottom: 30px
+    border-radius: 4px
 
 .equal:before
     content: ''
@@ -330,21 +386,6 @@ input
 .footer
     &__title
         margin-top: 150px
-    &__bg
-        // position: relative
-        // width: 100%
-        // height: 325px
-        // background: url(../img/mouintain-black.png) no-repeat bottom
-        // background-size: cover
-    &__section
-        display: flex
-        align-items: center
-        position: absolute
-        height: 50px
-        background: rgba(0, 0, 0, .5)
-        bottom: 0
-        left: 0
-        width: 100%
     &__nav-social a
         display: inline-block
         width: 35px
@@ -360,8 +401,59 @@ input
         &:hover
             opacity: .6
 
+.row-contacts .card
+    border: none
+    background: rgba(143, 210, 203, .1)
+    
 .card-body i
     color: $green
+
+#contact-form input,
+#contact-form textarea
+    display: block
+    font-size: 20px !important
+    font-weight: 600
+    margin-bottom: 25px
+    border-radius: 2px
+    &:focus
+        box-shadow: none
+        border-color: $green
+
+#contact-form textarea 
+    height: 150px
+    resize: none
+
+#contact-form label
+    color: #888
+
+#contact-form button
+    padding: 12px 30px
+    background: $green
+    color: black
+    font-size: 18px
+    font-weight: 600
+    &:hover
+        background: #f5f5f5
+
+// Modal
+.modal-dialog 
+    max-width: 800px
+    margin: 30px auto
+
+.modal-body 
+    position: relative
+    padding: 0px
+    width: 100%
+
+.close 
+    position: absolute
+    right: -30px
+    top: 0
+    z-index: 999
+    font-size: 2rem
+    font-weight: normal
+    color: #fff
+    opacity: 1
 
 // media
 @media screen and (max-width: 768px) 

@@ -15,6 +15,7 @@
 Route::get('/', 'MainController@index');
 Route::get('/card/info', 'MainController@cardInfo');
 Route::get('/page/{alias}', 'PageController@index');
+Route::post('/feedback', 'FeedbackController@index');
 
 // Панель управления Yurtaboard
 Route::group([

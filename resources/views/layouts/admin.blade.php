@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="/admin1/css/style.css">
     <link rel="stylesheet" href="/admin1/css/style1.css">
     <link rel="shortcut icon" href="../yurta-favicon.png" type="image/x-icon">
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    {{-- <script src="//cdn.ckeditor.com/4.12.1/basic/ckeditor.js"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/cgncyve30m4opfemkpohj7zwcesdgq8veq7mxhk6tx902iku/tinymce/5/tinymce.min.js"></script>
 </head>
 
 <body>
@@ -59,7 +58,12 @@
                 <ul class="nav page-navigation">
                     <li class="nav-item" id="yurtaindex">
                         <a href="/yurtaboard" class="nav-link">
-                            <span class="menu-title">Главная</span>
+                            <span class="menu-title">Карточки</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/sections" class="nav-link">
+                            <span class="menu-title">Секции</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -68,19 +72,9 @@
                             <i class="menu-title"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="/yurtaboard/cards" class="nav-link">
-                            <span class="menu-title">Карточки</span>
-                            <i class="menu-title"></i></a>
-                    </li>
-                    <li class="nav-item">
                         <a href="/yurtaboard/service" class="nav-link">
                             <span class="menu-title">Услуги</span>
                             <i class="menu-title"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/yurtaboard/sections" class="nav-link">
-                            <span class="menu-title">Секции</span>
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/settings" class="nav-link">
@@ -92,8 +86,7 @@
         </div>
     </nav>
     <div class="container-fluid page-body-wrapper">
-    @yield('content')
-
+        @yield('content')
         <footer class="footer">
             <div class="w-100 clearfix">
                 <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019</span>
@@ -108,15 +101,6 @@
 <script src="/admin1/js/template.js"></script>
 <script src="/admin1/js/todolist.js"></script>
 <script src="/admin1/js/dropify.js"></script>
-{{--<script src="/admin1/js/data-table.js"></script>--}}
-{{--<script src="/admin1/js/db.js"></script>--}}
-{{--<script src="/admin1/js/db2.js"></script>--}}
-{{--<script src="/admin1/js/file-upload.js"></script>--}}
-{{--<script src="/admin1/js/js-grid.js"></script>--}}
-{{--<script src="/admin1/js/js-grid2.js"></script>--}}
-{{--<script src="/admin1/js/select2.js"></script>--}}
-{{--<script src="/admin1/js/typeahead.js"></script>--}}
-
 <script>
   var options = {
     filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -126,6 +110,15 @@
     fullPage: true,
 	allowContent: 'a[!href]; ul; div; li{text-align}(someclass); link'
   };
+  tinymce.init({
+   selector: 'textarea',
+   plugins: 'a11ychecker advcode casechange formatpainter linkchecker lists checklist media mediaembed pageembed permanentpen powerpaste tinycomments tinydrive tinymcespellchecker',
+   toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter insertfile pageembed permanentpen',
+   toolbar_drawer: 'floating',
+   //menubar: "file",
+   tinycomments_mode: 'embedded',
+   tinycomments_author: 'Author name'
+});
 </script>
 
 </body>
