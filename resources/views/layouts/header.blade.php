@@ -2,7 +2,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-none py-2">
                 <a class="navbar-brand" href="/">
-                    <img src="img/yurta-logo.png" width="75" alt="Yurta">
+                    <img src="img/yurta-logo.png" width="65" alt="Yurta">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

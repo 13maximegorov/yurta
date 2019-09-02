@@ -56,7 +56,8 @@ class MainController extends Controller
     }
 
     public function getGallery() {
-        return Cards::orderBy('id', 'DESC')->get();
+        return Cards::orderBy('position', 'ASC')
+            ->where('is_active', '0')->get();
     }
 
     public function cardInfo(Request $r) {

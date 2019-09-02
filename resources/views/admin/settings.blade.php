@@ -7,8 +7,7 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title"><font style="vertical-align: inherit;"><font
-                                        style="vertical-align: inherit;">Настройки</font></font></h4>
+                            <h4 class="card-title"></h4>Настройки</h4>
                             <div class="table-responsive">
                                 <form class="forms-sample" method="post" action="/yurtaboard/settings/edit">
                                     {{csrf_field()}}
@@ -35,14 +34,8 @@
                                 <table class="table">
                                     <thead>
                                     <tr>
-                                        <th><font style="vertical-align: inherit;"><font
-                                                    style="vertical-align: inherit;">
-Параметр
-                                                </font></font></th>
-                                        <th><font style="vertical-align: inherit;"><font
-                                                    style="vertical-align: inherit;">
-                                                    Значение
-                                                </font></font></th>
+                                        <th>Параметр</th>
+                                        <th>Значение</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -60,7 +53,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p class="mb-0">Копирайтинг</p>
+                                            <p class="mb-0">Права</p>
                                         </td>
                                         <td><input type="text" class="form-control" name="site_footer" id="footer" placeholder="Копирайтинг" value="{{$settings['site.footer']['value']}}"></td>
                                     </tr>
@@ -68,7 +61,14 @@
                                         <td>
                                             <p class="mb-0">Описание</p>
                                         </td>
-                                        <td><textarea type="text" class="form-control" name="site_meta_desc" id="desc" placeholder="Описание">{{$settings['site.meta.desc']['value']}}</textarea></td>
+                                        <td>
+                                            <input type="text" 
+                                            class="form-control" 
+                                            name="site_meta_desc" 
+                                            id="desc" 
+                                            placeholder="Описание"
+                                            value="{{$settings['site.meta.desc']['value']}}">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>

@@ -15,10 +15,15 @@
 Route::get('/', 'MainController@index');
 Route::get('/card/info', 'MainController@cardInfo');
 Route::get('/page/{alias}', 'PageController@index');
+Route::post('/feedback', 'FeedbackController@index');
 
 // Панель управления Yurtaboard
-Route::group(['prefix' => '/yurtaboard', 'namespace' => 'Admin', 'middleware' => 'notAdmin'], function () {
-    Route::get('/', 'AdminController@index');
+Route::group([
+    'prefix' => '/yurtaboard', 
+    'namespace' => 'Admin', 
+    'middleware' => 'notAdmin'
+], function () {
+    Route::get('/', 'CardsController@cards');
     Route::get('/logout', 'JoinController@logout');
     Route::get('/cards', 'CardsController@cards');
     Route::get('/cards/add', 'CardsController@cardsAdd');
