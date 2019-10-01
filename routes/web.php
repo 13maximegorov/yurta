@@ -49,6 +49,7 @@ Route::group([
     Route::post('/nav/save', 'NavigationController@save');
 
     Route::get('/feedback', 'FeedbackController@index');
+    Route::get('/feedback/delete/{id}', 'FeedbackController@deleteFeedback');
 
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');

@@ -7,28 +7,42 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Секции</h4>
+                            <h4 class="card-title">Заявки (Обратная связь)</h4>
                             <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Название</th>
-                                        <th>Действие</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="w-100">
-                                            dfs
-                                        </td>
-                                        <td>
-                                            fsd
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                @if(count($feedback) > 0)
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>ФИО</th>
+                                            <th>Email</th>
+                                            <th>Телефон</th>
+                                            <th>Возраст</th>
+                                            <th>Хронические заболевания</th>
+                                            <th>Жалобы</th>
+                                            <th>Действие</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($feedback as $v)
+                                            <tr>
+                                                <td>{{$v->id}}</td>
+                                                <td>{{$v->inits}}</td>
+                                                <td>{{$v->email}}</td>
+                                                <td>{{$v->tel}}</td>
+                                                <td>{{$v->old}}</td>
+                                                <td>{{$v->dis}}</td>
+                                                <td>{{$v->com}}</td>
+                                                <td><a href="/yurtaboard/feedback/delete/{{ $v->id }}" class="btn btn-outline-danger">Удалить</a></td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                    @else
+                                    <div class="alert alert-warning">
+                                        Заявки отсутствуют
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

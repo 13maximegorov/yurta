@@ -22,6 +22,9 @@
         <div class="nav-top flex-grow-1">
             <div class="container d-flex flex-row h-100 align-items-center">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center">
+                    <a href="/">
+                        <img src="/img/yurta-black-logo.png" width="60" alt="Yurta" class="mr-3">
+                    </a>
                     <a class="navbar-brand brand-logo text-dark" href="/yurtaboard">
                         Панель управления
                     </a>
@@ -56,11 +59,6 @@
         <div class="nav-bottom">
             <div class="container">
                 <ul class="nav page-navigation">
-                    <li class="nav-item">
-                        <a href="/yurtaboard/feedback" class="nav-link">
-                            <span class="menu-title">Заявки</span>
-                        </a>
-                    </li>
                     <li class="nav-item" id="yurtaindex">
                         <a href="/yurtaboard" class="nav-link">
                             <span class="menu-title">Карточки</span>
@@ -80,6 +78,11 @@
                         <a href="/yurtaboard/service" class="nav-link">
                             <span class="menu-title">Услуги</span>
                             <i class="menu-title"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/yurtaboard/feedback" class="nav-link">
+                            <span class="menu-title">Заявки</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="/yurtaboard/settings" class="nav-link">

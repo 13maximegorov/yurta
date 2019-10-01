@@ -4,6 +4,11 @@
 <div class="row d-flex align-items-stretch">
     <div class="col-md-4 banner-section d-none d-md-flex align-items-stretch justify-content-center">
         <div class="slide-content bg-1">
+        <div style="background: rgba(0, 0, 0, 0.2); height: 100%; width: 100%">
+            <a class="navbar-brand mx-5 my-5" href="/">
+                <img src="/img/yurta-logo.png" width="100" alt="Yurta">
+            </a>
+        </div>
         </div>
     </div>
     <div class="col-12 col-md-8 h-100 bg-white">
