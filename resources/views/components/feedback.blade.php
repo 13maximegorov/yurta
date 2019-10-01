@@ -13,9 +13,19 @@
             </div>
         </div>
     @endif
+    @if (\Illuminate\Support\Facades\Session::has('success'))
+    <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                                    <div class="alert alert-success" role="alert">
+                                        {{\Illuminate\Support\Facades\Session::get('success')}}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    </div>
+                                @endif
     <div class="col-md-12 col-xl-12">
         <form id="contact-form" name="contact-form" method="post" action="/feedback">
-            {{ csrf_field() }} 
+            {{ csrf_field() }}
             <div class="row">
                 <div class="col-md-6">
                     <div class="md-form">
@@ -48,8 +58,7 @@
                         <label for="tel" class="">
                             Ваш номер телефона
                         </label>
-                        <input type="text" required id="tel" name="tel" class="form-control" placeholder="Телефон">
-
+                        <input type="text" required id="tel" name="tel" class="form-control" placeholder="+7(___) ___-__-__">
                     </div>
                 </div>
 
@@ -75,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="center-on-small-only">
+            <div class="center-on-small-only mb-4">
                 <button type="submit" class="btn btn-default">
                     Отправить
                 </button>

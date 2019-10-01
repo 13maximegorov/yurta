@@ -56,6 +56,11 @@
         <div class="nav-bottom">
             <div class="container">
                 <ul class="nav page-navigation">
+                    <li class="nav-item">
+                        <a href="/yurtaboard/feedback" class="nav-link">
+                            <span class="menu-title">Заявки</span>
+                        </a>
+                    </li>
                     <li class="nav-item" id="yurtaindex">
                         <a href="/yurtaboard" class="nav-link">
                             <span class="menu-title">Карточки</span>

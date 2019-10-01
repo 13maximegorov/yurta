@@ -19,8 +19,8 @@ Route::post('/feedback', 'FeedbackController@index');
 
 // Панель управления Yurtaboard
 Route::group([
-    'prefix' => '/yurtaboard', 
-    'namespace' => 'Admin', 
+    'prefix' => '/yurtaboard',
+    'namespace' => 'Admin',
     'middleware' => 'notAdmin'
 ], function () {
     Route::get('/', 'CardsController@cards');
@@ -33,7 +33,7 @@ Route::group([
     Route::get('cards/delete/{id}', 'CardsController@deleteCard');
     Route::get('/settings', 'SettingsController@settings');
     Route::post('/settings/edit', 'SettingsController@editSettings');
-    Route::get('/sections', 'SectionController@sections'); 
+    Route::get('/sections', 'SectionController@sections');
 
     Route::get('/service', 'ServiceController@index');
     Route::get('/service/edit/{id}', 'ServiceController@service');
@@ -48,6 +48,8 @@ Route::group([
     Route::get('/nav', 'NavigationController@index');
     Route::post('/nav/save', 'NavigationController@save');
 
+    Route::get('/feedback', 'FeedbackController@index');
+
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
     // list all lfm routes here...
@@ -55,8 +57,8 @@ Route::group([
 
 // Аутентификация
 Route::group([
-    'prefix' => '/yurtaboard', 
-    'namespace' => 'Admin', 
+    'prefix' => '/yurtaboard',
+    'namespace' => 'Admin',
     'middleware' => 'isAdmin'
 ], function () {
     Route::get('/login', 'JoinController@index');

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class JoinController extends Controller
+class  JoinController extends Controller
 {
     public function index() {
         return view('admin.signin');
@@ -18,7 +18,7 @@ class JoinController extends Controller
             return redirect('/yurtaboard');
         } else {
             Session::flash('error_admin', 'Неверные данные');
-            return redirect('/yurtaboard');
+            return redirect('/yurtaboard/login');
         }
     }
 
