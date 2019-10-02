@@ -24,9 +24,10 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <?php $i = 1 ?>
                                         @foreach($feedback as $v)
                                             <tr>
-                                                <td>{{$v->id}}</td>
+                                                <td>{{$i++}}</td>
                                                 <td>{{$v->inits}}</td>
                                                 <td>{{$v->email}}</td>
                                                 <td>{{$v->tel}}</td>

@@ -24,7 +24,7 @@
                                                     <a class="dropdown-item" href="/yurtaboard/cards/delete/{{$card->id}}">Удалить</a>
 
                                                     <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Просмотреть</a>
+                                                    <a class="dropdown-item" href="#">Посмотреть</a>
                                                     <a class="dropdown-item" href="/yurtaboard/cards/edit/{{$card->id}}">Редактировать</a>
 
                                                 </div>
