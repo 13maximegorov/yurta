@@ -1,4 +1,4 @@
-@extends('layouts.yurta') 
+@extends('layouts.yurta')
 @section('content')
 
 @component('components.over') @endcomponent
@@ -27,13 +27,13 @@
             <div>
                 <div class="row mt-5">
                     @if ($gallery) @foreach ($gallery as $item)
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4" style="cursor: pointer">
                         <div class="equal e-offer" data-title="{{$item->title}}" data-id="{{$item->id}}" data-img="{{$item->img}}">
                             <h6>{{ $item->title }}</h6>
                             <img src="/img/gallery/thumb/{{ $item->img }}" alt="{{ $item->title }}">
                         </div>
                     </div>
-                    @endforeach @endif 
+                    @endforeach @endif
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
     </div>
     <div class="container-fluid offer py-2">
         <div class="container mt-5">
-            
+
         </div>
     </div>
 </section>
@@ -55,7 +55,7 @@
 <section id="service" class="section py-3">
     <h3 class="text-center">{{ $data['service']->title }}</h3>
     <div class="container">
-        
+
         <?=$data['service']->text?>
 
         <a href="#contact-form" class="btn btn-default y-outline-btn d-table mx-auto mb-4">
@@ -147,10 +147,10 @@
             </div>
             <br>
         <p>
-            Ваша задача – обозначить ваши предпочтения. Мы, в свою очередь, подберем наиболее подходящий вариант проживания по приемлемым ценам. 
+            Ваша задача – обозначить ваши предпочтения. Мы, в свою очередь, подберем наиболее подходящий вариант проживания по приемлемым ценам.
         </p>
         <p>
-            Если Вы хотите насладиться нетронутой башкирской природой, отдохнуть вдалеке от шумного города и столпотворения людей на улицах, то коттеджи, деревенские домики на берегу реки – вот то, что Вам нужно. Свежий воздух придаст Вам сил и энергии. 
+            Если Вы хотите насладиться нетронутой башкирской природой, отдохнуть вдалеке от шумного города и столпотворения людей на улицах, то коттеджи, деревенские домики на берегу реки – вот то, что Вам нужно. Свежий воздух придаст Вам сил и энергии.
         </p>
 
     </div>
