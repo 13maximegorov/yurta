@@ -33,7 +33,8 @@
                                                 <td>{{$v->old}}</td>
                                                 <td>{{$v->dis}}</td>
                                                 <td>{{$v->com}}</td>
-                                                <td><a href="/yurtaboard/feedback/delete/{{ $v->id }}" class="btn btn-outline-danger">Удалить</a></td>
+                                                <td><a href="/yurtaboard/feedback/delete/{{ $v->id }}" class="btn btn-outline-danger mr-2">Удалить</a>
+                                                <a href="/yurtaboard/feedback/edit/{{ $v->id }}" class="btn btn-primary">Редактировать</a></td>
                                             </tr>
                                         @endforeach
                                         </tbody>

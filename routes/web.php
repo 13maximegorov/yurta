@@ -50,6 +50,8 @@ Route::group([
 
     Route::get('/feedback', 'FeedbackController@index');
     Route::get('/feedback/delete/{id}', 'FeedbackController@deleteFeedback');
+    Route::get('/feedback/edit/{id}', 'FeedbackController@feedback');
+    Route::post('/feedback/edit/{id}', 'FeedbackController@editFeedback');
 
     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/admin1/css/style.css">
     <link rel="stylesheet" href="/admin1/css/style1.css">
     <link rel="shortcut icon" href="../yurta-favicon.png" type="image/x-icon">
-    <script src="https://cdn.tiny.cloud/1/cgncyve30m4opfemkpohj7zwcesdgq8veq7mxhk6tx902iku/tinymce/5/tinymce.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/cgncyve30m4opfemkpohj7zwcesdgq8veq7mxhk6tx902iku/tinymce/5/tinymce.min.js?apiKey="></script>
 </head>
 
 <body>
