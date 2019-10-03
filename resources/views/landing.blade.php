@@ -3,7 +3,7 @@
 
 @component('components.over') @endcomponent
 
-<section id="welcome" class="section">
+<section id="welcome" class="section" style="background:url(../../public/img/bash_4.jpeg) center center">
     <div class="row justify-content-center align-items-center" style="height: 100vh">
         <div class="col-md-12">
             <div class="d-table mx-auto text-center welcome-info">
@@ -74,7 +74,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-img">
-                        <img data-action="zoom" src="http://utv.ru/media/og_image/149991897123276229.jpg" alt="">
+                        <img data-action="zoom" src="https://utv.ru/media/og_image/149991897123276229.jpg" alt="">
                     </div>
                     <div class="card-title">
                         Туризм
